@@ -1,0 +1,21 @@
+{
+  "timestamp": 1757991524.370506,
+  "ttl": 7200,
+  "dataset_id": "3wtp-43m9",
+  "sample_size": 100,
+  "shape": [
+    100,
+    9
+  ],
+  "columns": [
+    "dbn",
+    "school_name",
+    "total_students",
+    "students_in_temporary_housing",
+    "students_in_temporary_housing_1",
+    "students_residing_in_shelter",
+    "residing_in_dhs_shelter",
+    "residing_in_non_dhs_shelter",
+    "doubled_up"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "timestamp": 1757998550.9385808,
+  "ttl": 7200,
+  "dataset_id": "wewp-mm3p",
+  "sample_size": 500,
+  "shape": [
+    500,
+    9
+  ],
+  "columns": [
+    "unique_id",
+    "date",
+    "time",
+    "date_time",
+    "agency",
+    "agency_name",
+    "inquiry_name",
+    "brief_description",
+    "call_resolution"
+  ]
+}

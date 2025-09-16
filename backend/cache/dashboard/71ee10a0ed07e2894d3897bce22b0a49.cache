@@ -1,0 +1,172 @@
+{
+  "timestamp": 1757998485.9529476,
+  "ttl": 900,
+  "data_type": "top_updated_15",
+  "data": [
+    {
+      "id": "erm2-nwe9",
+      "name": "311 Service Requests from 2010 to Present",
+      "description": "<b>NOTE:</b> The 311 dataset is currently showing incorrect values in the \"Agency Name\" column. Please use the \"Agency\" column in the interim while this is being resolved.\n<p>\nAll 311 Service Requests from 2010 to present. This information is automatically updated daily.\n</p>",
+      "download_count": 479427,
+      "updated_at": "2025-09-16T01:32:49+00:00",
+      "category": "Social Services",
+      "tags": [],
+      "columns_count": 51,
+      "quality_score": null
+    },
+    {
+      "id": "jwvp-gyiq",
+      "name": "DOT Street Lights and Traffic Signals (311 Service Requests from 2010 to Present)",
+      "description": "<b>NOTE: This data does not present a full picture of 311 calls or service requests, in part because of operational and system complexities associated with remote call taking necessitated by the unprecedented volume 311 is handling during the Covid-19 crisis. The City is working to address this issue. </b>\r\n\r\nAll 311 Service Requests from 2010 to present. This information is automatically updated daily.<br /><br />Click here to download data from 2011 - <a href=\"https://data.cityofnewyork.us/dataset/311-Service-Requests-From-2011/fpz8-jqf4\" target=\"_blank\" rel=\"nofollow external\">https://data.cityofnewyork.us/dataset/311-Service-Requests-From-2011/fpz8-jqf4</a><br /><br />Click here to download data from 2012 - <a href=\"https://data.cityofnewyork.us/dataset/311-Service-Requests-From-2012/as38-8eb5\" target=\"_blank\" rel=\"nofollow external\">https://data.cityofnewyork.us/dataset/311-Service-Requests-From-2012/as38-8eb5</a><br /><br />Click here to download data from 2013 - <a href=\"https://data.cityofnewyork.us/dataset/311-Service-Requests-From-2013/hybb-af8n\" target=\"_blank\" rel=\"nofollow external\">https://data.cityofnewyork.us/dataset/311-Service-Requests-From-2013/hybb-af8n</a><br /><br />Click here to download data from 2014 - <a href=\"https://data.cityofnewyork.us/dataset/311-Service-Requests-From-2014/vtzg-7562\" target=\"_blank\" rel=\"nofollow external\">https://data.cityofnewyork.us/dataset/311-Service-Requests-From-2014/vtzg-7562</a><br /><br />Click here to download data from 2015 - <a href=\"https://data.cityofnewyork.us/dataset/311-Service-Requests-From-2015/57g5-etyj\" target=\"_blank\" rel=\"nofollow external\">https://data.cityofnewyork.us/dataset/311-Service-Requests-From-2015/57g5-etyj</a>",
+      "download_count": 35,
+      "updated_at": "2025-09-16T01:32:49+00:00",
+      "category": "Transportation",
+      "tags": [],
+      "columns_count": 0,
+      "quality_score": null
+    },
+    {
+      "id": "wewp-mm3p",
+      "name": "311 Call Center Inquiry",
+      "description": "<b>Please note: Due to pandemic call handling modifications, the activity data since March 2020 does not fully represent the agent-handled calls to 311. The actual calls handled are higher.</b>\r\n\r\nThe 311 Call Center Inquiry dataset contains information on all agent-handled calls to the City\u2019s 311 information line, including date, time and topic.\r\n\r\nClick <a href=\"https://data.cityofnewyork.us/api/views/wewp-mm3p/files/5ec79733-6c0b-4f84-b511-936142db396e?download=true&filename=Call%20Center%20Inquiry%20Data%20Dictionary.xlsx\">here </a>for the data dictionary.",
+      "download_count": 24905,
+      "updated_at": "2025-09-16T01:05:42+00:00",
+      "category": "City Government",
+      "tags": [],
+      "columns_count": 9,
+      "quality_score": null
+    },
+    {
+      "id": "gy3q-4tzp",
+      "name": "Active NYC Health Code Regulated Child Care Programs",
+      "description": "This is an official NYC Health Department dataset. the Health Department does not endorse datasets using this data that may be created by others.\n\nThis dataset lists active child care programs regulated under NYC Health Code Article 47 (Group Day Care) and Article 43 (School-based Child Care). \n\nHealth Code Article 47: https://www.nyc.gov/assets/doh/downloads/pdf/about/healthcode/health-code-article47.pdf\n\nHealth Code Article 43: https://www.nyc.gov/assets/doh/downloads/pdf/about/healthcode/health-code-article43.pdf\n\nThese data can be used to map NYC Health Code regulated child care programs and filter by attributes, such as location, ages served, facility type. It can also be used to answer questions such as how many group child care (GCC) programs are in a specific ZIP code.\n\nOnly active group child care (GCC) and school-based child care (SBCC) programs are displayed in this dataset. Child care programs with a 'preliminary', 'suspended', or 'closed' status are not included.",
+      "download_count": 927,
+      "updated_at": "2025-09-15T23:00:03+00:00",
+      "category": "Health",
+      "tags": [],
+      "columns_count": 25,
+      "quality_score": null
+    },
+    {
+      "id": "2v9c-2k7f",
+      "name": "FHV Base Aggregate Report",
+      "description": "Monthly report including total dispatched trips, total dispatched shared trips, and unique dispatched vehicles aggregated by FHV (For-Hire Vehicle) base. These have been tabulated from raw trip record submissions made by bases to the NYC Taxi and Limousine Commission (TLC). \r\n\r\nThis dataset is typically updated monthly on a two-month lag, as bases have until the conclusion of the following month to submit a month of trip records to the TLC. In example, a base has until Feb 28 to submit complete trip records for January. Therefore, the January base aggregates will appear in March at the earliest. The TLC may elect to defer updates to the FHV Base Aggregate Report if a large number of bases have failed to submit trip records by the due date.\r\n\r\nNote: The TLC publishes base trip record data as submitted by the bases, and we cannot guarantee or confirm their accuracy or completeness. Therefore, this may not represent the total amount of trips dispatched by all TLC-licensed bases. The TLC performs routine reviews of the records and takes enforcement actions when necessary to ensure, to the extent possible, complete and accurate information.",
+      "download_count": 21746,
+      "updated_at": "2025-09-15T22:11:15+00:00",
+      "category": "Transportation",
+      "tags": [],
+      "columns_count": 9,
+      "quality_score": null
+    },
+    {
+      "id": "ygpa-z7cr",
+      "name": "Housing Maintenance Code Complaints and Problems",
+      "description": "The Department of Housing Preservation and Development (HPD) records complaints that are made by the public for conditions which violate the New York City Housing Maintenance Code (HMC) or the New York State Multiple Dwelling Law (MDL).",
+      "download_count": 5668,
+      "updated_at": "2025-09-15T19:29:57+00:00",
+      "category": "Housing & Development",
+      "tags": [],
+      "columns_count": 33,
+      "quality_score": null
+    },
+    {
+      "id": "eabe-havv",
+      "name": "DOB Complaints Received",
+      "description": "This is the universe of complaints received by Department of Buildings (DOB). It includes complaints that come from 311 or that are entered into the system by DOB staff.\r\n\r\nA Complaint Categories codes can be found at\r\nhttp://www1.nyc.gov/assets/buildings/pdf/bis_complaint_disposition_codes.pdf",
+      "download_count": 52080,
+      "updated_at": "2025-09-15T16:40:02+00:00",
+      "category": "Housing & Development",
+      "tags": [],
+      "columns_count": 15,
+      "quality_score": null
+    },
+    {
+      "id": "rn6p-xvjd",
+      "name": "Inspections of Municipal Solid Waste Disposal Locations (No Longer Maintained)",
+      "description": "This dataset is based on a legacy system that is no longer maintained by the NYC Department of Sanitation (DSNY). It contains the following information about inspections of permitted, privately operated, municipal solid waste disposal locations: inspection ID number, inspection date, the number of violations, and number of warnings. \n\nSome current information about Transfer Station Complaints can be found in the 311 Service Requests dataset <a href=\"https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9\">(https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9)</a> by filtering the \"Complaint Type\" field for \"Transfer Station Complaint\".",
+      "download_count": 4081,
+      "updated_at": "2025-09-15T15:03:49+00:00",
+      "category": "City Government",
+      "tags": [],
+      "columns_count": 4,
+      "quality_score": null
+    },
+    {
+      "id": "wvxf-dwi5",
+      "name": "Housing Maintenance Code Violations",
+      "description": "Pursuant to New York City\u2019s Housing Maintenance Code, the Department of Housing Preservation and Development (HPD) issues violations against conditions, in rental dwelling units and buildings, that have been verified to violate the New York City Housing Maintenance Code (HMC) or the New York State Multiple Dwelling Law (MDL).\r\nEach row in this dataset contains discrete information about one violation of the New York City Housing Maintenance Code or New York State Multiple Dwelling Law. Each violation is identified using a unique Violation ID. These Laws are in place to provide requirements for the maintenance of residential dwelling units within New York City. \r\nViolations are issued by Housing Inspectors after a physical inspection is conducted (except for class I violations which are generally  administratively issued).  Violations are issued in four classes: Class A (non-hazardous), Class B (hazardous), Class C (immediately hazardous) and Class I (information orders).  For more information on violations, see https://www1.nyc.gov/site/hpd/owners/compliance-clear-violations.page  \r\nThe base data for this file is all violations open as of October 1, 2012.  Violation data is updated daily.  The daily update includes both new violations and updates to the status of previously issued violations. An open violation is a violation which is still active on the Department records. See the status table for determining how to filter for open violations versus closed violations, and within open violations for a more detailed current status. \r\nThe property owner may or may not have corrected the physical condition if the status is open. The violation status is closed when the violation is observed/verified as corrected by HPD or as certified by the landlord.   The processes for having violations dismissed are described at http://www1.nyc.gov/site/hpd/owners/compliance-clear-violations.page\r\nUsing other HPD datasets, such as the Building File or the Registration File, a user can link together violations issued for given buildings or for given owners.",
+      "download_count": 36799,
+      "updated_at": "2025-09-15T14:51:45+00:00",
+      "category": "Housing & Development",
+      "tags": [],
+      "columns_count": 41,
+      "quality_score": null
+    },
+    {
+      "id": "9jgj-bmct",
+      "name": "DOHMH Indoor Environmental Complaints",
+      "description": "Indoor Environmental Complaints \r\n\r\nThis data is largely received via complaints to 311; Each record represents a single complaint; This data can be used to help determine if the DOHMH has received an environmental complaint from a particular address; The listing of a particular address does not indicate that a condition or violation was found, only that a complaint was made to DOHMH",
+      "download_count": 5980,
+      "updated_at": "2025-09-15T13:44:19+00:00",
+      "category": "Health",
+      "tags": [],
+      "columns_count": 19,
+      "quality_score": null
+    },
+    {
+      "id": "cwy2-px8b",
+      "name": "Local Law 8 of 2020 \u2013 Complaints of Illegal Parking of Vehicles Operated on Behalf of the City",
+      "description": "<b>NOTE: This data does not present a full picture of 311 calls or service requests, in part because of operational and system complexities associated with remote call taking necessitated by the unprecedented volume 311 is handling during the Covid-19 crisis. The City is working to address this issue.</b><br />\r\nA row level daily report of illegal parking by City vehicle or permit 311 Service Requests starting from 1/30/20.",
+      "download_count": 3412,
+      "updated_at": "2025-09-15T13:36:01+00:00",
+      "category": "City Government",
+      "tags": [],
+      "columns_count": 38,
+      "quality_score": null
+    },
+    {
+      "id": "5ijn-vbdv",
+      "name": "311 Resolution Satisfaction Survey",
+      "description": "Every customer who makes a <a href=\"https://data.cityofnewyork.us/d/erm2-nwe9\" target=\"_blank\" rel=\"noopener\">Service Request to 311</a> and provides their contact information is offered the 311 Resolution Satisfaction Survey to provide feedback on their satisfaction with how a City Agency resolved their problem. Each row of data represents a survey response, and contains information about the survey response and the underlying service request. \n\nIn order to protect the anonymity of survey responses, the time the response is completed is aggregated to the month, and the location the service request pertains to is aggregated to the borough.\n\nSee the <a href=\"https://data.cityofnewyork.us/d/kizp-4dfk\" target=\"_blank\" rel=\"noopener\">311 Customer Satisfaction Survey</a> dataset for customer feedback on the performance of 311 call takers.",
+      "download_count": 312,
+      "updated_at": "2025-09-15T13:00:30+00:00",
+      "category": "City Government",
+      "tags": [],
+      "columns_count": 11,
+      "quality_score": null
+    },
+    {
+      "id": "dntt-gqwq",
+      "name": "Sidewalk Management Database - Inspection",
+      "description": "Sidewalk Management System is used to track and organize inspections, violations and the status of New York City sidewalks Identifies locations where DOT inspectors performed sidewalk inspections for defects.\nFor more information please visit NYC DOT website: www.nyc.gov/sidewalks",
+      "download_count": 499,
+      "updated_at": "2025-09-15T12:02:49+00:00",
+      "category": "Transportation",
+      "tags": [],
+      "columns_count": 17,
+      "quality_score": null
+    },
+    {
+      "id": "p937-wjvj",
+      "name": "Rodent Inspection",
+      "description": "Dataset contains information on rat inspections.\n\nRat Information Portal Data Release Notes        April 20, 2015\n\nThe Rat Information Portal (RIP) is a web-based mapping application where users can view rat inspection data. \n\nData sources: NYC Department of Health and Mental Hygiene (DOHMH), Division of Environmental Health Pest Control Database\n\nNotes on data limitations: Please note that if a property/taxlot does not appear in the file, that does not indicate an absence of rats - rather just that it has not been inspected. Similarly, neighborhoods with higher numbers properties with active rat signs may not actually have higher rat populations but simply have more inspections. \n\nSee our Data Disclaimer:\nhttp://www.nyc.gov/rats",
+      "download_count": 14564,
+      "updated_at": "2025-09-15T09:51:52+00:00",
+      "category": "Health",
+      "tags": [],
+      "columns_count": 34,
+      "quality_score": null
+    },
+    {
+      "id": "i2y3-sx2e",
+      "name": "Curb Metal Data",
+      "description": "This database tracks all correspondence and repairs on steel that protrudes from a sidewalk curb.",
+      "download_count": 1558,
+      "updated_at": "2025-09-15T08:00:04+00:00",
+      "category": "Transportation",
+      "tags": [],
+      "columns_count": 17,
+      "quality_score": null
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "timestamp": 1757836750.9984124,
+  "ttl": 1800,
+  "endpoint": "relationships",
+  "params": {
+    "key": "relationships_uzg5-56gw_0.3_10"
+  },
+  "data": {
+    "dataset_id": "uzg5-56gw",
+    "related_datasets": [
+      {
+        "dataset_id": "wi3r-8uzb",
+        "name": "DOHMH Community Mental Health Survey",
+        "similarity_score": 0.38160500382249257,
+        "relationship_reasons": [
+          "Similar usage patterns and metadata",
+          "Same domain category"
+        ],
+        "similarity_breakdown": {
+          "content": 0.46123989035769997,
+          "structural": 0.0,
+          "metadata": 0.9473936511960837,
+          "tag": 0.1,
+          "category": 1.0
+        },
+        "category": "Health",
+        "potential_joins": []
+      },
+      {
+        "dataset_id": "csut-3wpr",
+        "name": "New York City Community Health Survey",
+        "similarity_score": 0.3747710660460073,
+        "relationship_reasons": [
+          "Similar content and descriptions",
+          "Similar usage patterns and metadata",
+          "Same domain category"
+        ],
+        "similarity_breakdown": {
+          "content": 0.5568481535806777,
+          "structural": 0.0,
+          "metadata": 0.5968786974249082,
+          "tag": 0.25,
+          "category": 1.0
+        },
+        "category": "Health",
+        "potential_joins": []
+      },
+      {
+        "dataset_id": "u7vp-i37z",
+        "name": "2017-2021 NYC KIDS Survey",
+        "similarity_score": 0.3589250919869276,
+        "relationship_reasons": [
+          "Similar usage patterns and metadata",
+          "Same domain category"
+        ],
+        "similarity_breakdown": {
+          "content": 0.4845737287542174,
+          "structural": 0.0,
+          "metadata": 0.6932299291608638,
+          "tag": 0.2222222222222222,
+          "category": 1.0
+        },
+        "category": "Health",
+        "potential_joins": []
+      },
+      {
+        "dataset_id": "uqmk-4y2w",
+        "name": "Youth Risk Behavior Survey (Middle School)",
+        "similarity_score": 0.31163553475731554,
+        "relationship_reasons": [
+          "Similar usage patterns and metadata",
+          "Same domain category"
+        ],
+        "similarity_breakdown": {
+          "content": 0.2703880758597654,
+          "structural": 0.0,
+          "metadata": 0.989868696089396,
+          "tag": 0.1,
+          "category": 1.0
+        },
+        "category": "Health",
+        "potential_joins": []
+      },
+      {
+        "dataset_id": "67up-ztdf",
+        "name": "New York City Health Opinion Poll",
+        "similarity_score": 0.3020788329191697,
+        "relationship_reasons": [
+          "Similar usage patterns and metadata",
+          "Same domain category"
+        ],
+        "similarity_breakdown": {
+          "content": 0.3557982563237076,
+          "structural": 0.0,
+          "metadata": 0.6576561285238371,
+          "tag": 0.2222222222222222,
+          "category": 1.0
+        },
+        "category": "Health",
+        "potential_joins": []
+      }
+    ],
+    "network_stats": {
+      "datasets_analyzed": 607,
+      "relationships_found": 6455,
+      "graph_density": 0.035096590383914834,
+      "connected_components": 60,
+      "average_clustering": 0.5472655935381479,
+      "similarity_threshold": 0.3
+    }
+  }
+}

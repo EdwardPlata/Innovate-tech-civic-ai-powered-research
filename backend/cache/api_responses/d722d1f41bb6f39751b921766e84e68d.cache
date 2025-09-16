@@ -1,0 +1,211 @@
+{
+  "timestamp": 1757837468.5974948,
+  "ttl": 1800,
+  "endpoint": "relationships",
+  "params": {
+    "key": "relationships_erm2-nwe9_0.4_5"
+  },
+  "data": {
+    "dataset_id": "erm2-nwe9",
+    "related_datasets": [
+      {
+        "dataset_id": "sqcr-6mww",
+        "name": "311 Service Requests for 2004",
+        "similarity_score": 0.6061885721987308,
+        "relationship_reasons": [
+          "Similar data structure and columns",
+          "Similar usage patterns and metadata",
+          "Same domain category"
+        ],
+        "similarity_breakdown": {
+          "content": 0.42889373927555546,
+          "structural": 0.806153846153846,
+          "metadata": 0.5998482022310838,
+          "tag": 0.25,
+          "category": 1.0
+        },
+        "category": "Social Services",
+        "potential_joins": [
+          {
+            "source_column": "unique_key",
+            "target_column": "unique_key",
+            "join_score": 0.9,
+            "join_type": "exact_match"
+          },
+          {
+            "source_column": "incident_zip",
+            "target_column": "unique_key",
+            "join_score": 0.9,
+            "join_type": "reference"
+          },
+          {
+            "source_column": "incident_address",
+            "target_column": "unique_key",
+            "join_score": 0.9,
+            "join_type": "reference"
+          }
+        ]
+      },
+      {
+        "dataset_id": "uzcy-9puk",
+        "name": "311 Service Requests for 2008",
+        "similarity_score": 0.605676831569137,
+        "relationship_reasons": [
+          "Similar data structure and columns",
+          "Similar usage patterns and metadata",
+          "Same domain category"
+        ],
+        "similarity_breakdown": {
+          "content": 0.42889373927555546,
+          "structural": 0.806153846153846,
+          "metadata": 0.5964365980337912,
+          "tag": 0.25,
+          "category": 1.0
+        },
+        "category": "Social Services",
+        "potential_joins": [
+          {
+            "source_column": "unique_key",
+            "target_column": "unique_key",
+            "join_score": 0.9,
+            "join_type": "exact_match"
+          },
+          {
+            "source_column": "incident_zip",
+            "target_column": "unique_key",
+            "join_score": 0.9,
+            "join_type": "reference"
+          },
+          {
+            "source_column": "incident_zip",
+            "target_column": "incident_address",
+            "join_score": 0.9,
+            "join_type": "reference"
+          }
+        ]
+      },
+      {
+        "dataset_id": "aiww-p3af",
+        "name": "311 Service Requests for 2007",
+        "similarity_score": 0.6055863220660771,
+        "relationship_reasons": [
+          "Similar data structure and columns",
+          "Similar usage patterns and metadata",
+          "Same domain category"
+        ],
+        "similarity_breakdown": {
+          "content": 0.42889373927555546,
+          "structural": 0.806153846153846,
+          "metadata": 0.5958332013467255,
+          "tag": 0.25,
+          "category": 1.0
+        },
+        "category": "Social Services",
+        "potential_joins": [
+          {
+            "source_column": "unique_key",
+            "target_column": "unique_key",
+            "join_score": 0.9,
+            "join_type": "exact_match"
+          },
+          {
+            "source_column": "incident_zip",
+            "target_column": "unique_key",
+            "join_score": 0.9,
+            "join_type": "reference"
+          },
+          {
+            "source_column": "incident_address",
+            "target_column": "unique_key",
+            "join_score": 0.9,
+            "join_type": "reference"
+          }
+        ]
+      },
+      {
+        "dataset_id": "hy4q-igkk",
+        "name": "311 Service Requests for 2006",
+        "similarity_score": 0.600258203628782,
+        "relationship_reasons": [
+          "Similar data structure and columns",
+          "Similar usage patterns and metadata",
+          "Same domain category"
+        ],
+        "similarity_breakdown": {
+          "content": 0.41537112396281994,
+          "structural": 0.806153846153846,
+          "metadata": 0.5963727192653865,
+          "tag": 0.25,
+          "category": 1.0
+        },
+        "category": "Social Services",
+        "potential_joins": [
+          {
+            "source_column": "unique_key",
+            "target_column": "unique_key",
+            "join_score": 0.9,
+            "join_type": "exact_match"
+          },
+          {
+            "source_column": "incident_zip",
+            "target_column": "unique_key",
+            "join_score": 0.9,
+            "join_type": "reference"
+          },
+          {
+            "source_column": "incident_address",
+            "target_column": "unique_key",
+            "join_score": 0.9,
+            "join_type": "reference"
+          }
+        ]
+      },
+      {
+        "dataset_id": "sxmw-f24h",
+        "name": "311 Service Requests for 2005",
+        "similarity_score": 0.6000418042933924,
+        "relationship_reasons": [
+          "Similar data structure and columns",
+          "Similar usage patterns and metadata",
+          "Same domain category"
+        ],
+        "similarity_breakdown": {
+          "content": 0.41537112396281994,
+          "structural": 0.806153846153846,
+          "metadata": 0.5949300570294556,
+          "tag": 0.25,
+          "category": 1.0
+        },
+        "category": "Social Services",
+        "potential_joins": [
+          {
+            "source_column": "unique_key",
+            "target_column": "unique_key",
+            "join_score": 0.9,
+            "join_type": "exact_match"
+          },
+          {
+            "source_column": "incident_zip",
+            "target_column": "unique_key",
+            "join_score": 0.9,
+            "join_type": "reference"
+          },
+          {
+            "source_column": "incident_address",
+            "target_column": "unique_key",
+            "join_score": 0.9,
+            "join_type": "reference"
+          }
+        ]
+      }
+    ],
+    "network_stats": {
+      "datasets_analyzed": 285,
+      "relationships_found": 638,
+      "graph_density": 0.01576476402273289,
+      "connected_components": 134,
+      "average_clustering": 0.388995109837295,
+      "similarity_threshold": 0.4
+    }
+  }
+}

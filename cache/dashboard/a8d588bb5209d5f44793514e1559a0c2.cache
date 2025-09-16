@@ -1,0 +1,40 @@
+{
+  "timestamp": 1757833795.060334,
+  "ttl": 900,
+  "data_type": "top_updated_3",
+  "data": [
+    {
+      "id": "erm2-nwe9",
+      "name": "311 Service Requests from 2010 to Present",
+      "description": "<b>NOTE:</b> The 311 dataset is currently showing incorrect values in the \"Agency Name\" column. Please use the \"Agency\" column in the interim while this is being resolved.\n<p>\nAll 311 Service Requests from 2010 to present. This information is automatically updated daily.\n</p>",
+      "download_count": 479091,
+      "updated_at": "2025-09-14T01:47:50+00:00",
+      "category": "Social Services",
+      "tags": [],
+      "columns_count": 51,
+      "quality_score": null
+    },
+    {
+      "id": "wewp-mm3p",
+      "name": "311 Call Center Inquiry",
+      "description": "<b>Please note: Due to pandemic call handling modifications, the activity data since March 2020 does not fully represent the agent-handled calls to 311. The actual calls handled are higher.</b>\r\n\r\nThe 311 Call Center Inquiry dataset contains information on all agent-handled calls to the City\u2019s 311 information line, including date, time and topic.\r\n\r\nClick <a href=\"https://data.cityofnewyork.us/api/views/wewp-mm3p/files/5ec79733-6c0b-4f84-b511-936142db396e?download=true&filename=Call%20Center%20Inquiry%20Data%20Dictionary.xlsx\">here </a>for the data dictionary.",
+      "download_count": 24885,
+      "updated_at": "2025-09-14T01:04:42+00:00",
+      "category": "City Government",
+      "tags": [],
+      "columns_count": 9,
+      "quality_score": null
+    },
+    {
+      "id": "wvxf-dwi5",
+      "name": "Housing Maintenance Code Violations",
+      "description": "Pursuant to New York City\u2019s Housing Maintenance Code, the Department of Housing Preservation and Development (HPD) issues violations against conditions, in rental dwelling units and buildings, that have been verified to violate the New York City Housing Maintenance Code (HMC) or the New York State Multiple Dwelling Law (MDL).\r\nEach row in this dataset contains discrete information about one violation of the New York City Housing Maintenance Code or New York State Multiple Dwelling Law. Each violation is identified using a unique Violation ID. These Laws are in place to provide requirements for the maintenance of residential dwelling units within New York City. \r\nViolations are issued by Housing Inspectors after a physical inspection is conducted (except for class I violations which are generally  administratively issued).  Violations are issued in four classes: Class A (non-hazardous), Class B (hazardous), Class C (immediately hazardous) and Class I (information orders).  For more information on violations, see https://www1.nyc.gov/site/hpd/owners/compliance-clear-violations.page  \r\nThe base data for this file is all violations open as of October 1, 2012.  Violation data is updated daily.  The daily update includes both new violations and updates to the status of previously issued violations. An open violation is a violation which is still active on the Department records. See the status table for determining how to filter for open violations versus closed violations, and within open violations for a more detailed current status. \r\nThe property owner may or may not have corrected the physical condition if the status is open. The violation status is closed when the violation is observed/verified as corrected by HPD or as certified by the landlord.   The processes for having violations dismissed are described at http://www1.nyc.gov/site/hpd/owners/compliance-clear-violations.page\r\nUsing other HPD datasets, such as the Building File or the Registration File, a user can link together violations issued for given buildings or for given owners.",
+      "download_count": 36765,
+      "updated_at": "2025-09-13T14:52:01+00:00",
+      "category": "Housing & Development",
+      "tags": [],
+      "columns_count": 41,
+      "quality_score": null
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "timestamp": 1757994683.4467087,
+  "ttl": 7200,
+  "dataset_id": "q5u8-89nv",
+  "sample_size": 100,
+  "shape": [
+    100,
+    25
+  ],
+  "columns": [
+    "dca_license_number",
+    "license_status",
+    "business_name",
+    "business_unique_id",
+    "darp_enrollment_status",
+    "rotow_enrollment_status",
+    "building_number",
+    "street",
+    "city",
+    "state",
+    "postcode",
+    "borough",
+    "community_district",
+    "council_district",
+    "police_precinct",
+    "bin",
+    "bbl",
+    "nta",
+    "census_block_2010_",
+    "census_tract",
+    "latitude",
+    "longitude",
+    "x_coordinate",
+    "y_coordinate",
+    "dba_trade_name"
+  ]
+}

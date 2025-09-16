@@ -1,0 +1,47 @@
+{
+  "timestamp": 1757996650.2565193,
+  "ttl": 1800,
+  "data_type": "categories",
+  "data": [
+    {
+      "name": "City Government",
+      "count": 45,
+      "color": "#ff6b6b"
+    },
+    {
+      "name": "Public Safety",
+      "count": 38,
+      "color": "#4ecdc4"
+    },
+    {
+      "name": "Transportation",
+      "count": 32,
+      "color": "#45b7d1"
+    },
+    {
+      "name": "Health",
+      "count": 28,
+      "color": "#96ceb4"
+    },
+    {
+      "name": "Housing & Development",
+      "count": 25,
+      "color": "#ffd93d"
+    },
+    {
+      "name": "Environment",
+      "count": 22,
+      "color": "#ff8b94"
+    },
+    {
+      "name": "Business",
+      "count": 18,
+      "color": "#a8e6cf"
+    },
+    {
+      "name": "Education",
+      "count": 15,
+      "color": "#c7ceea"
+    }
+  ]
+}

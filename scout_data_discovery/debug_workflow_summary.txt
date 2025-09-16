@@ -1,0 +1,13 @@
+SCOUT 311 WORKFLOW DEBUG SUMMARY
+========================================
+Run completed: 2025-09-13 16:53:11
+
+RESULTS:
+✅ Found 14 311 datasets
+❌ No datasets found for analysis
+❌ No relationship analysis completed
+
+NEXT STEPS:
+1. If successful, you can now run the full Jupyter notebook
+2. If errors occurred, check the specific error messages above
+3. Common issues: API rate limits, network connectivity, missing dependencies

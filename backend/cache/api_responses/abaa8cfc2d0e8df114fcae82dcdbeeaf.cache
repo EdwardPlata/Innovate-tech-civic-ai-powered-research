@@ -1,0 +1,274 @@
+{
+  "timestamp": 1757811697.5980258,
+  "ttl": 1800,
+  "endpoint": "relationships",
+  "params": {
+    "key": "relationships_ygpa-z7cr_0.3_10"
+  },
+  "data": {
+    "dataset_id": "ygpa-z7cr",
+    "related_datasets": [
+      {
+        "dataset_id": "59kj-x8nc",
+        "name": "Housing Litigations",
+        "similarity_score": 0.5548060612657024,
+        "relationship_reasons": [
+          "Similar content and descriptions",
+          "Similar usage patterns and metadata",
+          "Same domain category"
+        ],
+        "similarity_breakdown": {
+          "content": 0.5456798456930962,
+          "structural": 0.43124999999999997,
+          "metadata": 0.9039774865897587,
+          "tag": 0.0,
+          "category": 1.0
+        },
+        "category": "Housing & Development",
+        "potential_joins": [
+          {
+            "source_column": "problem_id",
+            "target_column": "litigationid",
+            "join_score": 0.9,
+            "join_type": "semantic_match"
+          },
+          {
+            "source_column": "problem_id",
+            "target_column": "buildingid",
+            "join_score": 0.9,
+            "join_type": "semantic_match"
+          },
+          {
+            "source_column": "problem_id",
+            "target_column": "boroid",
+            "join_score": 0.9,
+            "join_type": "semantic_match"
+          }
+        ]
+      },
+      {
+        "dataset_id": "im9z-53hg",
+        "name": "Housing Maintenance Code Violations NYCHA properties",
+        "similarity_score": 0.5474692522529558,
+        "relationship_reasons": [
+          "Similar content and descriptions",
+          "Similar usage patterns and metadata",
+          "Same domain category"
+        ],
+        "similarity_breakdown": {
+          "content": 0.5646685257140673,
+          "structural": 0.4067796610169491,
+          "metadata": 0.861526404075978,
+          "tag": 0.0,
+          "category": 1.0
+        },
+        "category": "Housing & Development",
+        "potential_joins": []
+      },
+      {
+        "dataset_id": "hg8x-zxpr",
+        "name": "Affordable Housing Production by Building",
+        "similarity_score": 0.5068268918882776,
+        "relationship_reasons": [
+          "Similar usage patterns and metadata",
+          "Same domain category"
+        ],
+        "similarity_breakdown": {
+          "content": 0.45850289655330656,
+          "structural": 0.39692307692307693,
+          "metadata": 0.8966843756258531,
+          "tag": 0.0,
+          "category": 1.0
+        },
+        "category": "Housing & Development",
+        "potential_joins": [
+          {
+            "source_column": "problem_id",
+            "target_column": "project_id",
+            "join_score": 0.9,
+            "join_type": "semantic_match"
+          },
+          {
+            "source_column": "problem_id",
+            "target_column": "building_id",
+            "join_score": 0.9,
+            "join_type": "semantic_match"
+          },
+          {
+            "source_column": "problem_id",
+            "target_column": "postcode",
+            "join_score": 0.9,
+            "join_type": "semantic_match"
+          }
+        ]
+      },
+      {
+        "dataset_id": "wvxf-dwi5",
+        "name": "Housing Maintenance Code Violations",
+        "similarity_score": 0.47256182993238666,
+        "relationship_reasons": [
+          "Similar usage patterns and metadata",
+          "Same domain category"
+        ],
+        "similarity_breakdown": {
+          "content": 0.3724377195739583,
+          "structural": 0.39692307692307693,
+          "metadata": 0.8977577678648425,
+          "tag": 0.0,
+          "category": 1.0
+        },
+        "category": "Housing & Development",
+        "potential_joins": [
+          {
+            "source_column": "problem_id",
+            "target_column": "violationid",
+            "join_score": 0.9,
+            "join_type": "reference"
+          },
+          {
+            "source_column": "problem_id",
+            "target_column": "buildingid",
+            "join_score": 0.9,
+            "join_type": "semantic_match"
+          },
+          {
+            "source_column": "problem_id",
+            "target_column": "registrationid",
+            "join_score": 0.9,
+            "join_type": "semantic_match"
+          }
+        ]
+      },
+      {
+        "dataset_id": "hq68-rnsi",
+        "name": "Affordable Housing Production by Project",
+        "similarity_score": 0.4684269581419807,
+        "relationship_reasons": [
+          "Similar usage patterns and metadata",
+          "Same domain category"
+        ],
+        "similarity_breakdown": {
+          "content": 0.45850289655330656,
+          "structural": 0.3,
+          "metadata": 0.8668386634710538,
+          "tag": 0.0,
+          "category": 1.0
+        },
+        "category": "Housing & Development",
+        "potential_joins": [
+          {
+            "source_column": "problem_id",
+            "target_column": "project_id",
+            "join_score": 0.9,
+            "join_type": "semantic_match"
+          },
+          {
+            "source_column": "problem_id",
+            "target_column": "extremely_low_income_units",
+            "join_score": 0.9,
+            "join_type": "semantic_match"
+          },
+          {
+            "source_column": "problem_id",
+            "target_column": "very_low_income",
+            "join_score": 0.9,
+            "join_type": "semantic_match"
+          }
+        ]
+      },
+      {
+        "dataset_id": "tesw-yqqr",
+        "name": "Multiple Dwelling Registrations",
+        "similarity_score": 0.46612052087766626,
+        "relationship_reasons": [
+          "Similar usage patterns and metadata",
+          "Same domain category"
+        ],
+        "similarity_breakdown": {
+          "content": 0.4227056036017956,
+          "structural": 0.3456521739130435,
+          "metadata": 0.8404001237825521,
+          "tag": 0.0,
+          "category": 1.0
+        },
+        "category": "Housing & Development"
+      },
+      {
+        "dataset_id": "kj4p-ruqc",
+        "name": "Buildings Subject to HPD Jurisdiction",
+        "similarity_score": 0.4476846792169123,
+        "relationship_reasons": [
+          "Similar usage patterns and metadata",
+          "Same domain category"
+        ],
+        "similarity_breakdown": {
+          "content": 0.44623189471290653,
+          "structural": 0.23962264150943394,
+          "metadata": 0.9021599786896524,
+          "tag": 0.0,
+          "category": 1.0
+        },
+        "category": "Housing & Development"
+      },
+      {
+        "dataset_id": "mdbu-nrqn",
+        "name": "Open Market Order (OMO) Charges",
+        "similarity_score": 0.43156883902885645,
+        "relationship_reasons": [
+          "Similar usage patterns and metadata",
+          "Same domain category"
+        ],
+        "similarity_breakdown": {
+          "content": 0.19995464038695612,
+          "structural": 0.44259259259259254,
+          "metadata": 0.9778638364444442,
+          "tag": 0.0,
+          "category": 1.0
+        },
+        "category": "Housing & Development"
+      },
+      {
+        "dataset_id": "hcir-3275",
+        "name": "Buildings Selected for the Alternative Enforcement Program (AEP)",
+        "similarity_score": 0.42314088891683405,
+        "relationship_reasons": [
+          "Similar usage patterns and metadata",
+          "Same domain category"
+        ],
+        "similarity_breakdown": {
+          "content": 0.22968789797191944,
+          "structural": 0.42727272727272725,
+          "metadata": 0.8781351678840786,
+          "tag": 0.0,
+          "category": 1.0
+        },
+        "category": "Housing & Development"
+      },
+      {
+        "dataset_id": "frre-6z6q",
+        "name": "Low Income Housing Tax Credits Awarded by HPD: Project-Level (9% Awards)",
+        "similarity_score": 0.4144807412405257,
+        "relationship_reasons": [
+          "Similar usage patterns and metadata",
+          "Same domain category"
+        ],
+        "similarity_breakdown": {
+          "content": 0.32554974594228286,
+          "structural": 0.3792452830188679,
+          "metadata": 0.6768332920467254,
+          "tag": 0.0,
+          "category": 1.0
+        },
+        "category": "Housing & Development"
+      }
+    ],
+    "network_stats": {
+      "datasets_analyzed": 604,
+      "relationships_found": 6285,
+      "graph_density": 0.0345128661329116,
+      "connected_components": 67,
+      "average_clustering": 0.5348034405579168,
+      "similarity_threshold": 0.3
+    }
+  }
+}

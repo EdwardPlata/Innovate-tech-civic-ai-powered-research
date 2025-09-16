@@ -1,0 +1,60 @@
+{
+  "timestamp": 1757997166.7727733,
+  "ttl": 1800,
+  "endpoint": "network_visualization",
+  "params": {
+    "key": "network_viz_cwmx-mvra_0.4_15"
+  },
+  "data": {
+    "nodes": [
+      {
+        "id": "cwmx-mvra",
+        "name": "Dataset cwmx-mvra",
+        "size": 15,
+        "color": "#ff6b6b",
+        "type": "primary",
+        "category": "Unknown",
+        "download_count": 0,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "edges": [],
+    "layout": "force",
+    "statistics": {
+      "total_nodes": 1,
+      "total_edges": 0,
+      "avg_similarity": 0,
+      "max_similarity": 0,
+      "join_capable_datasets": 0,
+      "relationship_types": []
+    },
+    "legend": [
+      {
+        "type": "primary",
+        "color": "#ff6b6b",
+        "description": "Target Dataset"
+      },
+      {
+        "type": "thematic_similarity",
+        "color": "#4ecdc4",
+        "description": "Thematic Similarity"
+      },
+      {
+        "type": "join_potential",
+        "color": "#ff8b94",
+        "description": "Join Potential"
+      },
+      {
+        "type": "category_match",
+        "color": "#96ceb4",
+        "description": "Same Category"
+      },
+      {
+        "type": "structural_similarity",
+        "color": "#45b7d1",
+        "description": "Similar Structure"
+      }
+    ]
+  }
+}

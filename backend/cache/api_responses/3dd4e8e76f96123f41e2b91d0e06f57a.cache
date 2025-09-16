@@ -1,0 +1,146 @@
+{
+  "timestamp": 1757991391.087421,
+  "ttl": 1800,
+  "endpoint": "relationships",
+  "params": {
+    "key": "relationships_3wtp-43m9_0.3_10"
+  },
+  "data": {
+    "dataset_id": "3wtp-43m9",
+    "related_datasets": [
+      {
+        "dataset_id": "pjwn-nnx8",
+        "name": "2015 - 2016 Career Technical Education Report",
+        "similarity_score": 0.354421768707483,
+        "relationship_type": "thematic_similarity",
+        "relationship_reasons": [
+          "Same category: Education",
+          "Similar content themes"
+        ],
+        "category": "Education",
+        "download_count": 938,
+        "potential_joins": []
+      },
+      {
+        "dataset_id": "s47t-kwt5",
+        "name": "2020-2021 Local Law 102 Physical Education",
+        "similarity_score": 0.35235602094240837,
+        "relationship_type": "thematic_similarity",
+        "relationship_reasons": [
+          "Same category: Education",
+          "Similar content themes"
+        ],
+        "category": "Education",
+        "download_count": 754,
+        "potential_joins": []
+      },
+      {
+        "dataset_id": "yg8h-c8c7",
+        "name": "2016 - 2017 Career Technical Education Report",
+        "similarity_score": 0.3503496503496504,
+        "relationship_type": "thematic_similarity",
+        "relationship_reasons": [
+          "Same category: Education",
+          "Similar content themes"
+        ],
+        "category": "Education",
+        "download_count": 1025,
+        "potential_joins": []
+      },
+      {
+        "dataset_id": "is5y-7g3y",
+        "name": "2017-2018 Physical Education - PE Space",
+        "similarity_score": 0.3503496503496504,
+        "relationship_type": "thematic_similarity",
+        "relationship_reasons": [
+          "Same category: Education",
+          "Similar content themes"
+        ],
+        "category": "Education",
+        "download_count": 740,
+        "potential_joins": []
+      },
+      {
+        "dataset_id": "dfv3-jzjw",
+        "name": "Pupil Transportation Count of Employees Bus Company - July 1, - December 31, 2021",
+        "similarity_score": 0.3484076433121019,
+        "relationship_type": "thematic_similarity",
+        "relationship_reasons": [
+          "Same category: Education",
+          "Similar content themes"
+        ],
+        "category": "Education",
+        "download_count": 746,
+        "potential_joins": []
+      },
+      {
+        "dataset_id": "r9z2-6j3f",
+        "name": "2018 - 2019 Career Technical Education Report",
+        "similarity_score": 0.34556962025316457,
+        "relationship_type": "thematic_similarity",
+        "relationship_reasons": [
+          "Same category: Education",
+          "Similar content themes"
+        ],
+        "category": "Education",
+        "download_count": 1013,
+        "potential_joins": []
+      },
+      {
+        "dataset_id": "gf36-w2jr",
+        "name": "2019-2020 Local Law 102 Physical Education Report -Final",
+        "similarity_score": 0.34363636363636363,
+        "relationship_type": "thematic_similarity",
+        "relationship_reasons": [
+          "Same category: Education",
+          "Similar content themes"
+        ],
+        "category": "Education",
+        "download_count": 762,
+        "potential_joins": []
+      },
+      {
+        "dataset_id": "xqmg-7z3j",
+        "name": "2015-2016 Physical Education - PE Space",
+        "similarity_score": 0.3427480916030534,
+        "relationship_type": "thematic_similarity",
+        "relationship_reasons": [
+          "Same category: Education",
+          "Similar content themes"
+        ],
+        "category": "Education",
+        "download_count": 2418,
+        "potential_joins": []
+      },
+      {
+        "dataset_id": "nhak-36my",
+        "name": "2015-16 Health Education K-12 - Health Instructors",
+        "similarity_score": 0.3375,
+        "relationship_type": "thematic_similarity",
+        "relationship_reasons": [
+          "Same category: Education"
+        ],
+        "category": "Education",
+        "download_count": 985,
+        "potential_joins": []
+      },
+      {
+        "dataset_id": "i762-rk6i",
+        "name": "2008 NYC School Survey -  - General Education",
+        "similarity_score": 0.3375,
+        "relationship_type": "thematic_similarity",
+        "relationship_reasons": [
+          "Same category: Education"
+        ],
+        "category": "Education",
+        "download_count": 170,
+        "potential_joins": []
+      }
+    ],
+    "network_stats": {
+      "total_datasets": 150,
+      "relationships_found": 10,
+      "fast_mode": true
+    }
+  }
+}

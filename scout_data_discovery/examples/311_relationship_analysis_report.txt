@@ -1,0 +1,139 @@
+DATASET RELATIONSHIP ANALYSIS REPORT
+==================================================
+Generated on: 2025-09-13 17:21:38
+
+OVERVIEW
+--------------------
+Total Datasets: 220
+Total Relationships: 10361
+Graph Density: 0.430
+Connected Components: 1
+Average Clustering Coefficient: 0.670
+
+CLUSTER ANALYSIS
+--------------------
+
+Cluster 1: 42 datasets
+  - 311 Service Requests from 2010 to Present (Social Services)
+  - 311 Service Requests for 2009 (Social Services)
+  - 311 Service Requests for 2008 (Social Services)
+  ... and 39 more
+
+Cluster 3: 33 datasets
+  - 311 Call Center Inquiry (City Government)
+  - 311 Resolution Satisfaction Survey (City Government)
+  - 311 Interpreter Wait Time (City Government)
+  ... and 30 more
+
+Cluster 7: 22 datasets
+  - 311 Service Level Agreements (City Government)
+  - 311 Web Content - Services (City Government)
+  - Lot Cleaning Dispositions (No Longer Maintained) (City Government)
+  ... and 19 more
+
+Cluster 8: 12 datasets
+  - DOT Street Lights and Traffic Signals (311 Service Requests  (Transportation)
+  - Parking Meters Locations and Status (Map) (Transportation)
+  - Hurricane Evacuation Centers (Map) (Public Safety)
+  ... and 9 more
+
+Cluster 5: 42 datasets
+  - Commissioner's Correspondence (Transportation)
+  - DOHMH Indoor Environmental Complaints (Health)
+  - Curb Metal Data (Transportation)
+  ... and 39 more
+
+Cluster 2: 41 datasets
+  - Forestry Service Requests (Environment)
+  - Work Order Management Module (Environment)
+  - DOB Complaints Received (Housing & Development)
+  ... and 38 more
+
+Cluster 6: 16 datasets
+  - Urban Park Ranger Animal Condition Response (Environment)
+  - Building Complaint Disposition Codes (Housing & Development)
+  - DOB Job Application Filings (Housing & Development)
+  ... and 13 more
+
+Cluster 4: 12 datasets
+  - Cable Complaints (City Government)
+  - Sandy Inundation Zone (Environment)
+  - DEP Green Infrastructure Map (All Layers) (Environment)
+  ... and 9 more
+
+STRONGEST RELATIONSHIPS
+------------------------------
+1. Parking Violations Issued - Fiscal Year  ↔ Parking Violations Issued - Fiscal Year 
+   Similarity: 0.995 | Reasons: Similar content and descriptions, Similar data structure and columns, Similar usage patterns and metadata, Shared tags and categories, Same domain category
+
+2. Parking Violations Issued - Fiscal Year  ↔ Parking Violations Issued - Fiscal Year 
+   Similarity: 0.982 | Reasons: Similar content and descriptions, Similar data structure and columns, Similar usage patterns and metadata, Shared tags and categories, Same domain category
+
+3. Parking Violations Issued - Fiscal Year  ↔ Parking Violations Issued - Fiscal Year 
+   Similarity: 0.982 | Reasons: Similar content and descriptions, Similar data structure and columns, Similar usage patterns and metadata, Shared tags and categories, Same domain category
+
+4. Broadband Adoption and Infrastructure by ↔ Broadband Adoption and Infrastructure by
+   Similarity: 0.974 | Reasons: Similar content and descriptions, Similar data structure and columns, Similar usage patterns and metadata, Shared tags and categories, Same domain category
+
+5. Parking Violations Issued - Fiscal Year  ↔ Parking Violations Issued - Fiscal Year 
+   Similarity: 0.948 | Reasons: Similar content and descriptions, Similar data structure and columns, Similar usage patterns and metadata, Shared tags and categories, Same domain category
+
+6. Parking Violations Issued - Fiscal Year  ↔ Parking Violations Issued - Fiscal Year 
+   Similarity: 0.947 | Reasons: Similar content and descriptions, Similar data structure and columns, Similar usage patterns and metadata, Shared tags and categories, Same domain category
+
+7. Housing Database by 2020 NTA ↔ Housing Database by Community District
+   Similarity: 0.944 | Reasons: Similar content and descriptions, Similar data structure and columns, Similar usage patterns and metadata, Shared tags and categories, Same domain category
+
+8. Parking Violations Issued - Fiscal Year  ↔ Parking Violations Issued - Fiscal Year 
+   Similarity: 0.938 | Reasons: Similar content and descriptions, Similar data structure and columns, Similar usage patterns and metadata, Shared tags and categories, Same domain category
+
+9. Parking Violations Issued - Fiscal Year  ↔ Parking Violations Issued - Fiscal Year 
+   Similarity: 0.922 | Reasons: Similar content and descriptions, Similar data structure and columns, Similar usage patterns and metadata, Shared tags and categories, Same domain category
+
+10. Parking Violations Issued - Fiscal Year  ↔ Parking Violations Issued - Fiscal Year 
+   Similarity: 0.922 | Reasons: Similar content and descriptions, Similar data structure and columns, Similar usage patterns and metadata, Shared tags and categories, Same domain category
+
+CATEGORY DISTRIBUTION
+-------------------------
+City Government: 60 datasets
+Environment: 39 datasets
+Housing & Development: 29 datasets
+Transportation: 20 datasets
+Education: 14 datasets
+Public Safety: 13 datasets
+Social Services: 12 datasets
+Health: 10 datasets
+: 10 datasets
+Recreation: 7 datasets
+
+MOST CONNECTED DATASETS
+------------------------------
+1. DOB Safety Violations
+   Connections: 161 | Centrality: 0.735
+
+2. Parks Inspection Program – Public Restroom Individ
+   Connections: 159 | Centrality: 0.726
+
+3. NYC Permitted Event Information - Historical
+   Connections: 159 | Centrality: 0.726
+
+4. 311 Resolution Satisfaction Survey
+   Connections: 158 | Centrality: 0.721
+
+5. DSNY Monthly Tonnage Data
+   Connections: 156 | Centrality: 0.712
+
+6. Watershed Water Quality Data
+   Connections: 156 | Centrality: 0.712
+
+7. DOHMH School Cafeteria Inspections (2020-Present)
+   Connections: 155 | Centrality: 0.708
+
+8. Parks Inspection Program – Inspections
+   Connections: 154 | Centrality: 0.703
+
+9. 311 Interpreter Wait Time
+   Connections: 152 | Centrality: 0.694
+
+10. 311 Customer Satisfaction Survey
+   Connections: 151 | Centrality: 0.689

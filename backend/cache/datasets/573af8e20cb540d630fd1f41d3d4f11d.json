@@ -1,0 +1,14 @@
+{
+  "timestamp": 1757806594.772009,
+  "ttl": 7200,
+  "dataset_id": "yini-w76t",
+  "sample_size": 100,
+  "shape": [
+    100,
+    2
+  ],
+  "columns": [
+    "dispatching_base_num",
+    "pickup_date"
+  ]
+}

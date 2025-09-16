@@ -1,0 +1,18 @@
+{
+  "timestamp": 1757995464.4093637,
+  "ttl": 7200,
+  "dataset_id": "cwmx-mvra",
+  "sample_size": 100,
+  "shape": [
+    100,
+    6
+  ],
+  "columns": [
+    "extract_date",
+    "specimen_date",
+    "number_tested",
+    "number_confirmed",
+    "number_hospitalized",
+    "number_deaths"
+  ]
+}

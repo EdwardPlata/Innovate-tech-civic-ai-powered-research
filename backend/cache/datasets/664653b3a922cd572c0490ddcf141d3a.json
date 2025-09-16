@@ -1,0 +1,39 @@
+{
+  "timestamp": 1758031982.919973,
+  "ttl": 7200,
+  "dataset_id": "h9gi-nx95",
+  "sample_size": 100,
+  "shape": [
+    100,
+    27
+  ],
+  "columns": [
+    "crash_date",
+    "crash_time",
+    "on_street_name",
+    "off_street_name",
+    "number_of_persons_injured",
+    "number_of_persons_killed",
+    "number_of_pedestrians_injured",
+    "number_of_pedestrians_killed",
+    "number_of_cyclist_injured",
+    "number_of_cyclist_killed",
+    "number_of_motorist_injured",
+    "number_of_motorist_killed",
+    "contributing_factor_vehicle_1",
+    "contributing_factor_vehicle_2",
+    "collision_id",
+    "vehicle_type_code1",
+    "vehicle_type_code2",
+    "borough",
+    "zip_code",
+    "latitude",
+    "longitude",
+    "location",
+    "contributing_factor_vehicle_3",
+    "vehicle_type_code_3",
+    "cross_street_name",
+    "contributing_factor_vehicle_4",
+    "vehicle_type_code_4"
+  ]
+}

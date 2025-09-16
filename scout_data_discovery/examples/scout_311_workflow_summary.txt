@@ -1,0 +1,46 @@
+SCOUT DATA DISCOVERY - 311 WORKFLOW ANALYSIS SUMMARY
+============================================================
+Analysis completed: 2025-09-13 17:21:39
+
+DATASET DISCOVERY
+--------------------
+311 Datasets Found: 63
+Most Popular 311 Dataset: 311 Service Requests from 2010 to Present...
+Total Related Datasets: 220
+Top Categories: City Government, Environment, Housing & Development
+
+QUALITY ASSESSMENT
+--------------------
+Datasets Assessed: 4
+Average Quality Score: 93.2/100
+Best Quality Dataset: NYPD Complaint Data Current (Year To Dat... (95.1/100)
+
+RELATIONSHIP ANALYSIS
+--------------------
+Datasets in Network: 220
+Relationships Found: 10361
+Network Density: 0.430
+Connected Groups: 1
+Datasets Related to Primary 311: 8
+Most Similar Dataset: 311 Service Requests for 2004... (0.559)
+
+KEY INSIGHTS AND RECOMMENDATIONS
+----------------------------------------
+✓ Successfully discovered 311 service request datasets
+✓ Primary dataset identified: 311 Service Requests from 2010 to Presen...
+✓ Found meaningful relationships between datasets
+✓ Network analysis reveals data integration opportunities
+✓ Identified 8 datasets related to 311 services
+
+INTEGRATION RECOMMENDATIONS:
+1. Consider integrating with 311 Service Requests for 2004... (Similar data structure and columns)
+2. Consider integrating with 311 Service Requests for 2008... (Similar data structure and columns)
+3. Consider integrating with 311 Service Requests for 2007... (Similar data structure and columns)
+✓ Found 4 high-quality datasets (score ≥ 80)
+✓ These datasets are recommended for production use
+
+FILES GENERATED:
+- 311_dataset_network.png (Static network visualization)
+- 311_interactive_network.html (Interactive network visualization)
+- 311_relationship_analysis_report.txt (Detailed relationship report)
+- scout_311_workflow_summary.txt (This summary report)

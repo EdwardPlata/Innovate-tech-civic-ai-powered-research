@@ -1,0 +1,117 @@
+{
+  "timestamp": 1757833425.875652,
+  "ttl": 900,
+  "data_type": "top_updated_10",
+  "data": [
+    {
+      "id": "erm2-nwe9",
+      "name": "311 Service Requests from 2010 to Present",
+      "description": "<b>NOTE:</b> The 311 dataset is currently showing incorrect values in the \"Agency Name\" column. Please use the \"Agency\" column in the interim while this is being resolved.\n<p>\nAll 311 Service Requests from 2010 to present. This information is automatically updated daily.\n</p>",
+      "download_count": 479081,
+      "updated_at": "2025-09-14T01:47:50+00:00",
+      "category": "Social Services",
+      "tags": [],
+      "columns_count": 51,
+      "quality_score": null
+    },
+    {
+      "id": "jwvp-gyiq",
+      "name": "DOT Street Lights and Traffic Signals (311 Service Requests from 2010 to Present)",
+      "description": "<b>NOTE: This data does not present a full picture of 311 calls or service requests, in part because of operational and system complexities associated with remote call taking necessitated by the unprecedented volume 311 is handling during the Covid-19 crisis. The City is working to address this issue. </b>\r\n\r\nAll 311 Service Requests from 2010 to present. This information is automatically updated daily.<br /><br />Click here to download data from 2011 - <a href=\"https://data.cityofnewyork.us/dataset/311-Service-Requests-From-2011/fpz8-jqf4\" target=\"_blank\" rel=\"nofollow external\">https://data.cityofnewyork.us/dataset/311-Service-Requests-From-2011/fpz8-jqf4</a><br /><br />Click here to download data from 2012 - <a href=\"https://data.cityofnewyork.us/dataset/311-Service-Requests-From-2012/as38-8eb5\" target=\"_blank\" rel=\"nofollow external\">https://data.cityofnewyork.us/dataset/311-Service-Requests-From-2012/as38-8eb5</a><br /><br />Click here to download data from 2013 - <a href=\"https://data.cityofnewyork.us/dataset/311-Service-Requests-From-2013/hybb-af8n\" target=\"_blank\" rel=\"nofollow external\">https://data.cityofnewyork.us/dataset/311-Service-Requests-From-2013/hybb-af8n</a><br /><br />Click here to download data from 2014 - <a href=\"https://data.cityofnewyork.us/dataset/311-Service-Requests-From-2014/vtzg-7562\" target=\"_blank\" rel=\"nofollow external\">https://data.cityofnewyork.us/dataset/311-Service-Requests-From-2014/vtzg-7562</a><br /><br />Click here to download data from 2015 - <a href=\"https://data.cityofnewyork.us/dataset/311-Service-Requests-From-2015/57g5-etyj\" target=\"_blank\" rel=\"nofollow external\">https://data.cityofnewyork.us/dataset/311-Service-Requests-From-2015/57g5-etyj</a>",
+      "download_count": 35,
+      "updated_at": "2025-09-14T01:47:50+00:00",
+      "category": "Transportation",
+      "tags": [],
+      "columns_count": 0,
+      "quality_score": null
+    },
+    {
+      "id": "wewp-mm3p",
+      "name": "311 Call Center Inquiry",
+      "description": "<b>Please note: Due to pandemic call handling modifications, the activity data since March 2020 does not fully represent the agent-handled calls to 311. The actual calls handled are higher.</b>\r\n\r\nThe 311 Call Center Inquiry dataset contains information on all agent-handled calls to the City\u2019s 311 information line, including date, time and topic.\r\n\r\nClick <a href=\"https://data.cityofnewyork.us/api/views/wewp-mm3p/files/5ec79733-6c0b-4f84-b511-936142db396e?download=true&filename=Call%20Center%20Inquiry%20Data%20Dictionary.xlsx\">here </a>for the data dictionary.",
+      "download_count": 24885,
+      "updated_at": "2025-09-14T01:04:42+00:00",
+      "category": "City Government",
+      "tags": [],
+      "columns_count": 9,
+      "quality_score": null
+    },
+    {
+      "id": "2v9c-2k7f",
+      "name": "FHV Base Aggregate Report",
+      "description": "Monthly report including total dispatched trips, total dispatched shared trips, and unique dispatched vehicles aggregated by FHV (For-Hire Vehicle) base. These have been tabulated from raw trip record submissions made by bases to the NYC Taxi and Limousine Commission (TLC). \r\n\r\nThis dataset is typically updated monthly on a two-month lag, as bases have until the conclusion of the following month to submit a month of trip records to the TLC. In example, a base has until Feb 28 to submit complete trip records for January. Therefore, the January base aggregates will appear in March at the earliest. The TLC may elect to defer updates to the FHV Base Aggregate Report if a large number of bases have failed to submit trip records by the due date.\r\n\r\nNote: The TLC publishes base trip record data as submitted by the bases, and we cannot guarantee or confirm their accuracy or completeness. Therefore, this may not represent the total amount of trips dispatched by all TLC-licensed bases. The TLC performs routine reviews of the records and takes enforcement actions when necessary to ensure, to the extent possible, complete and accurate information.",
+      "download_count": 21733,
+      "updated_at": "2025-09-13T22:01:58+00:00",
+      "category": "Transportation",
+      "tags": [],
+      "columns_count": 9,
+      "quality_score": null
+    },
+    {
+      "id": "ygpa-z7cr",
+      "name": "Housing Maintenance Code Complaints and Problems",
+      "description": "The Department of Housing Preservation and Development (HPD) records complaints that are made by the public for conditions which violate the New York City Housing Maintenance Code (HMC) or the New York State Multiple Dwelling Law (MDL).",
+      "download_count": 5622,
+      "updated_at": "2025-09-13T19:30:44+00:00",
+      "category": "Housing & Development",
+      "tags": [],
+      "columns_count": 33,
+      "quality_score": null
+    },
+    {
+      "id": "wvxf-dwi5",
+      "name": "Housing Maintenance Code Violations",
+      "description": "Pursuant to New York City\u2019s Housing Maintenance Code, the Department of Housing Preservation and Development (HPD) issues violations against conditions, in rental dwelling units and buildings, that have been verified to violate the New York City Housing Maintenance Code (HMC) or the New York State Multiple Dwelling Law (MDL).\r\nEach row in this dataset contains discrete information about one violation of the New York City Housing Maintenance Code or New York State Multiple Dwelling Law. Each violation is identified using a unique Violation ID. These Laws are in place to provide requirements for the maintenance of residential dwelling units within New York City. \r\nViolations are issued by Housing Inspectors after a physical inspection is conducted (except for class I violations which are generally  administratively issued).  Violations are issued in four classes: Class A (non-hazardous), Class B (hazardous), Class C (immediately hazardous) and Class I (information orders).  For more information on violations, see https://www1.nyc.gov/site/hpd/owners/compliance-clear-violations.page  \r\nThe base data for this file is all violations open as of October 1, 2012.  Violation data is updated daily.  The daily update includes both new violations and updates to the status of previously issued violations. An open violation is a violation which is still active on the Department records. See the status table for determining how to filter for open violations versus closed violations, and within open violations for a more detailed current status. \r\nThe property owner may or may not have corrected the physical condition if the status is open. The violation status is closed when the violation is observed/verified as corrected by HPD or as certified by the landlord.   The processes for having violations dismissed are described at http://www1.nyc.gov/site/hpd/owners/compliance-clear-violations.page\r\nUsing other HPD datasets, such as the Building File or the Registration File, a user can link together violations issued for given buildings or for given owners.",
+      "download_count": 36760,
+      "updated_at": "2025-09-13T14:52:01+00:00",
+      "category": "Housing & Development",
+      "tags": [],
+      "columns_count": 41,
+      "quality_score": null
+    },
+    {
+      "id": "cwy2-px8b",
+      "name": "Local Law 8 of 2020 \u2013 Complaints of Illegal Parking of Vehicles Operated on Behalf of the City",
+      "description": "<b>NOTE: This data does not present a full picture of 311 calls or service requests, in part because of operational and system complexities associated with remote call taking necessitated by the unprecedented volume 311 is handling during the Covid-19 crisis. The City is working to address this issue.</b><br />\r\nA row level daily report of illegal parking by City vehicle or permit 311 Service Requests starting from 1/30/20.",
+      "download_count": 3388,
+      "updated_at": "2025-09-13T13:46:46+00:00",
+      "category": "City Government",
+      "tags": [],
+      "columns_count": 38,
+      "quality_score": null
+    },
+    {
+      "id": "w7w3-xahh",
+      "name": "Issued Licenses",
+      "description": "This dataset features licenses issued by the NYC Department of Consumer and Worker Protection (DCWP)\u2014formerly the Department of Consumer Affairs (DCA).",
+      "download_count": 54287,
+      "updated_at": "2025-09-12T19:30:17+00:00",
+      "category": "Business",
+      "tags": [],
+      "columns_count": 31,
+      "quality_score": null
+    },
+    {
+      "id": "5ijn-vbdv",
+      "name": "311 Resolution Satisfaction Survey",
+      "description": "Every customer who makes a <a href=\"https://data.cityofnewyork.us/d/erm2-nwe9\" target=\"_blank\" rel=\"noopener\">Service Request to 311</a> and provides their contact information is offered the 311 Resolution Satisfaction Survey to provide feedback on their satisfaction with how a City Agency resolved their problem. Each row of data represents a survey response, and contains information about the survey response and the underlying service request. \n\nIn order to protect the anonymity of survey responses, the time the response is completed is aggregated to the month, and the location the service request pertains to is aggregated to the borough.\n\nSee the <a href=\"https://data.cityofnewyork.us/d/kizp-4dfk\" target=\"_blank\" rel=\"noopener\">311 Customer Satisfaction Survey</a> dataset for customer feedback on the performance of 311 call takers.",
+      "download_count": 303,
+      "updated_at": "2025-09-08T13:02:16+00:00",
+      "category": "City Government",
+      "tags": [],
+      "columns_count": 11,
+      "quality_score": null
+    },
+    {
+      "id": "m79g-k9r4",
+      "name": "Mandatory Inclusionary Housing",
+      "description": "The Mandatory Inclusionary Housing program was adopted in 2016 to encourage the creation of housing for families at a range of incomes in areas planned for housing growth. When actions of the Commission significantly increase residential density, the City Planning Commission and the City Council will apply one or more options to require affordable housing as part of new residential construction.\nAll previously released versions of this data are available on the <a href=\"https://www.nyc.gov/content/planning/pages/resources/datasets/mandatory-inclusionary-housing\">DCP Website: BYTES of the BIG APPLE</a>.",
+      "download_count": 1253,
+      "updated_at": "2025-09-02T19:55:15+00:00",
+      "category": "City Government",
+      "tags": [],
+      "columns_count": 13,
+      "quality_score": null
+    }
+  ]
+}

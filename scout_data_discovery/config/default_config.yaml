@@ -1,0 +1,110 @@
+# Scout Data Discovery - Default Configuration
+
+# API Settings
+api:
+  rate_limit_delay: 0.5  # seconds between requests
+  request_timeout: 30    # seconds
+  retry_attempts: 3
+  max_concurrent_requests: 5
+
+# Caching Settings
+cache:
+  duration_hours: 24
+  directory: "cache"
+  enable_file_cache: true
+  enable_memory_cache: true
+
+# Data Processing Settings
+data:
+  default_sample_size: 1000
+  max_search_results: 100
+  quality_threshold: 70  # minimum quality score (0-100)
+  max_parallel_assessments: 20
+
+# Supported Data Portals
+portals:
+  default_domains:
+    - "data.cityofnewyork.us"
+    - "data.cityofchicago.org"
+    - "data.seattle.gov"
+    - "data.sfgov.org"
+
+  # Portal-specific settings
+  socrata:
+    discovery_api_url: "http://api.us.socrata.com/api/catalog/v1"
+    resource_base_urls:
+      "data.cityofnewyork.us": "https://data.cityofnewyork.us/resource"
+      "data.cityofchicago.org": "https://data.cityofchicago.org/resource"
+
+# Quality Assessment Settings
+quality:
+  weights:
+    completeness: 0.25
+    consistency: 0.20
+    accuracy: 0.20
+    timeliness: 0.15
+    usability: 0.20
+
+  thresholds:
+    high_quality: 90
+    medium_quality: 70
+    low_quality: 50
+
+  outlier_detection:
+    method: "iqr"  # interquartile range
+    multiplier: 1.5
+
+# Recommendation Settings
+recommendations:
+  similarity_weights:
+    category_match: 0.4
+    tag_similarity: 0.3
+    column_similarity: 0.2
+    description_similarity: 0.1
+
+  max_recommendations_per_dataset: 10
+  min_similarity_score: 0.1
+
+# Logging Settings
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  enable_file_logging: false
+  log_file: "logs/scout_discovery.log"
+
+# Export Settings
+export:
+  default_directory: "exports"
+  formats:
+    - "csv"
+    - "json"
+    - "parquet"
+  include_metadata: true
+  include_summary_report: true
+
+# Search Settings
+search:
+  default_limit: 50
+  max_terms_per_query: 5
+  enable_fuzzy_matching: false
+
+  # Search result filtering
+  filters:
+    min_download_count: 0
+    min_page_views: 0
+    exclude_empty_datasets: true
+    required_metadata_fields:
+      - "name"
+      - "description"
+
+# Performance Settings
+performance:
+  enable_parallel_processing: true
+  max_memory_usage_mb: 1000
+  chunk_size_for_large_datasets: 10000
+
+# Security Settings
+security:
+  user_agent: "ScoutDataDiscovery/1.0 (Research Tool)"
+  respect_robots_txt: true
+  max_request_rate_per_minute: 120

@@ -1,0 +1,25 @@
+# Frontend Streamlit Requirements
+streamlit>=1.28.0
+pandas>=2.0.0
+numpy>=1.24.0
+plotly>=5.15.0
+requests>=2.31.0
+
+# Visualization
+matplotlib>=3.6.0
+seaborn>=0.12.0
+altair>=5.0.0
+
+# Network visualization
+networkx>=3.0
+
+# UI components
+streamlit-option-menu>=0.3.6
+
+# Data handling
+pyarrow>=8.0.0
+openpyxl>=3.0.0
+
+# Maps and geospatial
+folium>=0.14.0
+streamlit-folium>=0.15.0

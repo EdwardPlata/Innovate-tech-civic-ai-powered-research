@@ -1,0 +1,144 @@
+{
+  "timestamp": 1757998535.408215,
+  "ttl": 1800,
+  "endpoint": "relationships",
+  "params": {
+    "key": "relationships_wewp-mm3p_0.3_10"
+  },
+  "data": {
+    "dataset_id": "wewp-mm3p",
+    "related_datasets": [
+      {
+        "dataset_id": "dzvt-6g3v",
+        "name": "311 Interpreter Wait Time",
+        "similarity_score": 0.3742857142857143,
+        "relationship_type": "thematic_similarity",
+        "relationship_reasons": [
+          "Same category: City Government",
+          "Similar content themes"
+        ],
+        "category": "City Government",
+        "download_count": 1014,
+        "potential_joins": []
+      },
+      {
+        "dataset_id": "vwpc-kje2",
+        "name": "311 Web Content - Services",
+        "similarity_score": 0.35128205128205126,
+        "relationship_type": "thematic_similarity",
+        "relationship_reasons": [
+          "Same category: City Government",
+          "Similar content themes"
+        ],
+        "category": "City Government",
+        "download_count": 19895,
+        "potential_joins": []
+      },
+      {
+        "dataset_id": "5ijn-vbdv",
+        "name": "311 Resolution Satisfaction Survey",
+        "similarity_score": 0.3484848484848485,
+        "relationship_type": "thematic_similarity",
+        "relationship_reasons": [
+          "Same category: City Government",
+          "Similar content themes"
+        ],
+        "category": "City Government",
+        "download_count": 312,
+        "potential_joins": []
+      },
+      {
+        "dataset_id": "9y7k-h295",
+        "name": "Local Law 8 of 2020 Report \u2013 Monthly Complaints of Illegal Parking of Vehicles Operated on Behalf of the City",
+        "similarity_score": 0.34545454545454546,
+        "relationship_type": "thematic_similarity",
+        "relationship_reasons": [
+          "Same category: City Government",
+          "Similar content themes"
+        ],
+        "category": "City Government",
+        "download_count": 3427,
+        "potential_joins": []
+      },
+      {
+        "dataset_id": "cwy2-px8b",
+        "name": "Local Law 8 of 2020 \u2013 Complaints of Illegal Parking of Vehicles Operated on Behalf of the City",
+        "similarity_score": 0.34444444444444444,
+        "relationship_type": "thematic_similarity",
+        "relationship_reasons": [
+          "Same category: City Government",
+          "Similar content themes"
+        ],
+        "category": "City Government",
+        "download_count": 3412,
+        "potential_joins": []
+      },
+      {
+        "dataset_id": "kizp-4dfk",
+        "name": "311 Customer Satisfaction Survey",
+        "similarity_score": 0.3413793103448276,
+        "relationship_type": "thematic_similarity",
+        "relationship_reasons": [
+          "Same category: City Government",
+          "Similar content themes"
+        ],
+        "category": "City Government",
+        "download_count": 296,
+        "potential_joins": []
+      },
+      {
+        "dataset_id": "6ez8-za84",
+        "name": "Health Center Districts",
+        "similarity_score": 0.3395061728395062,
+        "relationship_type": "thematic_similarity",
+        "relationship_reasons": [
+          "Same category: City Government"
+        ],
+        "category": "City Government",
+        "download_count": 1187,
+        "potential_joins": []
+      },
+      {
+        "dataset_id": "7ffd-6gs9",
+        "name": "Public feedback on 311 request/complaint types",
+        "similarity_score": 0.33835616438356164,
+        "relationship_type": "thematic_similarity",
+        "relationship_reasons": [
+          "Same category: City Government"
+        ],
+        "category": "City Government",
+        "download_count": 760,
+        "potential_joins": []
+      },
+      {
+        "dataset_id": "rn6p-xvjd",
+        "name": "Inspections of Municipal Solid Waste Disposal Locations (No Longer Maintained)",
+        "similarity_score": 0.336734693877551,
+        "relationship_type": "thematic_similarity",
+        "relationship_reasons": [
+          "Same category: City Government"
+        ],
+        "category": "City Government",
+        "download_count": 4081,
+        "potential_joins": []
+      },
+      {
+        "dataset_id": "jntv-ngw5",
+        "name": "Health Areas",
+        "similarity_score": 0.33589743589743587,
+        "relationship_type": "thematic_similarity",
+        "relationship_reasons": [
+          "Same category: City Government"
+        ],
+        "category": "City Government",
+        "download_count": 40,
+        "potential_joins": []
+      }
+    ],
+    "network_stats": {
+      "total_datasets": 150,
+      "relationships_found": 10,
+      "fast_mode": true
+    }
+  }
+}

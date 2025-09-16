@@ -1,0 +1,143 @@
+{
+  "timestamp": 1757991305.284557,
+  "ttl": 1800,
+  "endpoint": "relationships",
+  "params": {
+    "key": "relationships_knr6-vurn_0.3_10"
+  },
+  "data": {
+    "dataset_id": "knr6-vurn",
+    "related_datasets": [
+      {
+        "dataset_id": "wi3r-8uzb",
+        "name": "DOHMH Community Mental Health Survey",
+        "similarity_score": 0.34705882352941175,
+        "relationship_type": "thematic_similarity",
+        "relationship_reasons": [
+          "Same category: Health",
+          "Similar content themes"
+        ],
+        "category": "Health",
+        "download_count": 4398,
+        "potential_joins": []
+      },
+      {
+        "dataset_id": "67up-ztdf",
+        "name": "New York City Health Opinion Poll",
+        "similarity_score": 0.3433333333333333,
+        "relationship_type": "thematic_similarity",
+        "relationship_reasons": [
+          "Same category: Health",
+          "Similar content themes"
+        ],
+        "category": "Health",
+        "download_count": 1069,
+        "potential_joins": []
+      },
+      {
+        "dataset_id": "da9u-wz3r",
+        "name": "Metal Content of Consumer Products Tested by the NYC Health Department",
+        "similarity_score": 0.3426229508196721,
+        "relationship_type": "thematic_similarity",
+        "relationship_reasons": [
+          "Same category: Health",
+          "Similar content themes"
+        ],
+        "category": "Health",
+        "download_count": 7798,
+        "potential_joins": []
+      },
+      {
+        "dataset_id": "uzg5-56gw",
+        "name": "2015 Child Health, Emotional Wellness, and Development Survey (CHEWDS)",
+        "similarity_score": 0.3411214953271028,
+        "relationship_type": "thematic_similarity",
+        "relationship_reasons": [
+          "Same category: Health",
+          "Similar content themes"
+        ],
+        "category": "Health",
+        "download_count": 919,
+        "potential_joins": []
+      },
+      {
+        "dataset_id": "csut-3wpr",
+        "name": "New York City Community Health Survey",
+        "similarity_score": 0.3403361344537815,
+        "relationship_type": "thematic_similarity",
+        "relationship_reasons": [
+          "Same category: Health",
+          "Similar content themes"
+        ],
+        "category": "Health",
+        "download_count": 5076,
+        "potential_joins": []
+      },
+      {
+        "dataset_id": "nk7g-qeep",
+        "name": "DOHMH Health Map - Hepatitis",
+        "similarity_score": 0.33878787878787875,
+        "relationship_type": "thematic_similarity",
+        "relationship_reasons": [
+          "Same category: Health"
+        ],
+        "category": "Health",
+        "download_count": 3012,
+        "potential_joins": []
+      },
+      {
+        "dataset_id": "3qty-g4aq",
+        "name": "Youth Behavior Risk Survey (High School)",
+        "similarity_score": 0.33666666666666667,
+        "relationship_type": "thematic_similarity",
+        "relationship_reasons": [
+          "Same category: Health"
+        ],
+        "category": "Health",
+        "download_count": 8724,
+        "potential_joins": []
+      },
+      {
+        "dataset_id": "dsg6-ifza",
+        "name": "DOHMH Childcare Center Inspections",
+        "similarity_score": 0.3347826086956522,
+        "relationship_type": "thematic_similarity",
+        "relationship_reasons": [
+          "Same category: Health"
+        ],
+        "category": "Health",
+        "download_count": 15409,
+        "potential_joins": []
+      },
+      {
+        "dataset_id": "9jgj-bmct",
+        "name": "DOHMH Indoor Environmental Complaints",
+        "similarity_score": 0.3346153846153846,
+        "relationship_type": "thematic_similarity",
+        "relationship_reasons": [
+          "Same category: Health"
+        ],
+        "category": "Health",
+        "download_count": 5978,
+        "potential_joins": []
+      },
+      {
+        "dataset_id": "gfej-by6h",
+        "name": "Primary Care Access and Planning - Health Insurance Enrollment",
+        "similarity_score": 0.33211678832116787,
+        "relationship_type": "thematic_similarity",
+        "relationship_reasons": [
+          "Same category: Health"
+        ],
+        "category": "Health",
+        "download_count": 1628,
+        "potential_joins": []
+      }
+    ],
+    "network_stats": {
+      "total_datasets": 150,
+      "relationships_found": 10,
+      "fast_mode": true
+    }
+  }
+}
