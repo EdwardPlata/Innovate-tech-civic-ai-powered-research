@@ -28,8 +28,10 @@ import io
 scout_path = Path(__file__).parent.parent / "scout_data_discovery"
 sys.path.append(str(scout_path))
 
-# Add AI_Functionality to path
-ai_functionality_path = Path(__file__).parent.parent / "AI_Functionality"
+# Add project root and AI_Functionality to path
+project_root = Path(__file__).parent.parent
+sys.path.append(str(project_root))
+ai_functionality_path = project_root / "AI_Functionality"
 sys.path.append(str(ai_functionality_path))
 
 # Import Scout components
@@ -52,6 +54,7 @@ logger = logging.getLogger(__name__)
 # Import AI Functionality components
 try:
     from AI_Functionality import DataAnalyst, AnalysisType
+    from AI_Functionality.core.dataset_chat_service import DatasetChatService
     AI_FUNCTIONALITY_AVAILABLE = True
     logger.info("✅ AI Functionality package loaded successfully")
 except ImportError as e:
@@ -64,6 +67,8 @@ except ImportError as e:
         OVERVIEW = "overview"
         QUALITY = "quality"
         INSIGHTS = "insights"
+    class DatasetChatService:
+        def __init__(self, **kwargs): pass
 
 # Initialize FastAPI app
 app = FastAPI(
@@ -85,6 +90,7 @@ app.add_middleware(
 scout_instance = None
 cache_manager = None
 ai_analyst = None
+chat_service = None
 executor = ThreadPoolExecutor(max_workers=APIConfig.MAX_WORKERS)
 REQUEST_TIMEOUT = APIConfig.REQUEST_TIMEOUT
 
@@ -171,6 +177,33 @@ class RelationshipResponse(BaseModel):
     related_datasets: List[Dict[str, Any]]
     network_stats: Dict[str, Any]
 
+# Chat-related Pydantic models
+class ChatRequest(BaseModel):
+    question: str
+    dataset_name: Optional[str] = None
+    
+class ChatResponse(BaseModel):
+    success: bool
+    question: str
+    dataset: Optional[str] = None
+    code: Optional[str] = None
+    output: Optional[str] = None
+    error: Optional[str] = None
+    timestamp: str
+
+class LoadDatasetRequest(BaseModel):
+    name: str
+    data: List[Dict[str, Any]]
+
+class ChatMemoryConfigRequest(BaseModel):
+    memory_limit: int
+
+class ChatMemoryConfigResponse(BaseModel):
+    memory_limit: int
+    current_history_length: int
+    success: bool
+    message: str
+
 # Background task storage
 background_tasks = {}
 
@@ -203,6 +236,30 @@ def initialize_ai_analyst():
 
     except Exception as e:
         logger.error(f"❌ Failed to initialize AI Analyst: {e}")
+        return False
+
+def initialize_chat_service(memory_limit: int = 5):
+    """Initialize dataset chat service with current session API keys"""
+    global chat_service
+
+    if not AI_FUNCTIONALITY_AVAILABLE:
+        return False
+
+    try:
+        api_keys = session_storage.get("api_keys", {})
+
+        # Use NVIDIA key if available
+        nvidia_key = api_keys.get("nvidia_api_key")
+        if not nvidia_key:
+            logger.info("No NVIDIA API key configured - chat service will be limited")
+            return False
+
+        chat_service = DatasetChatService(nvidia_key, memory_limit=memory_limit)
+        logger.info(f"✅ Chat Service initialized successfully with memory limit: {memory_limit}")
+        return True
+
+    except Exception as e:
+        logger.error(f"❌ Failed to initialize Chat Service: {e}")
         return False
 
 @app.on_event("startup")
@@ -1805,6 +1862,9 @@ async def configure_ai_services(config: AIConfigRequest):
 
         # Reinitialize AI analyst with new configuration
         ai_initialized = initialize_ai_analyst()
+        
+        # Also initialize chat service if NVIDIA key is available
+        chat_initialized = initialize_chat_service()
 
         logger.info(f"✅ AI configuration updated - {len(api_keys)} providers configured")
 
@@ -1812,6 +1872,7 @@ async def configure_ai_services(config: AIConfigRequest):
             "message": "AI configuration updated successfully",
             "providers_configured": list(api_keys.keys()),
             "ai_available": ai_initialized,
+            "chat_available": chat_initialized,
             "ai_functionality_available": AI_FUNCTIONALITY_AVAILABLE,
             "primary_provider": config.primary_provider
         }
@@ -2681,6 +2742,164 @@ async def answer_codebase_question(request: CodebaseQuestionRequest):
     except Exception as e:
         logger.error(f"❌ Codebase question error: {e}")
         raise HTTPException(status_code=500, detail=f"Codebase question failed: {str(e)}")
+
+# Dataset Chat Endpoints
+@app.post("/api/chat/load-dataset")
+async def load_dataset_for_chat(request: LoadDatasetRequest):
+    """Load a dataset into the chat service for querying"""
+    try:
+        if not chat_service:
+            raise HTTPException(status_code=503, detail="Chat service not initialized. Configure API keys first.")
+        
+        success = chat_service.load_dataset(request.name, request.data)
+        
+        if success:
+            dataset_info = chat_service.get_dataset_info(request.name)
+            logger.info(f"✅ Dataset '{request.name}' loaded successfully")
+            return {
+                "success": True,
+                "message": f"Dataset '{request.name}' loaded successfully",
+                "dataset_info": dataset_info
+            }
+        else:
+            raise HTTPException(status_code=400, detail=f"Failed to load dataset '{request.name}'")
+            
+    except Exception as e:
+        logger.error(f"❌ Load dataset error: {e}")
+        raise HTTPException(status_code=500, detail=f"Load dataset failed: {str(e)}")
+
+@app.post("/api/chat/ask", response_model=ChatResponse)
+async def ask_question_about_dataset(request: ChatRequest):
+    """Ask a natural language question about a loaded dataset"""
+    try:
+        if not chat_service:
+            # Try to initialize chat service
+            if not initialize_chat_service():
+                raise HTTPException(status_code=503, detail="Chat service not available. Configure NVIDIA API key first.")
+        
+        result = await chat_service.chat(request.question, request.dataset_name)
+        
+        logger.info(f"✅ Chat question processed: {request.question[:50]}...")
+        return ChatResponse(**result)
+        
+    except Exception as e:
+        logger.error(f"❌ Chat question error: {e}")
+        raise HTTPException(status_code=500, detail=f"Chat question failed: {str(e)}")
+
+@app.get("/api/chat/datasets")
+async def get_loaded_datasets():
+    """Get information about datasets loaded in the chat service"""
+    try:
+        if not chat_service:
+            return {"available_datasets": [], "dataset_info": {}}
+        
+        dataset_info = chat_service.get_dataset_info()
+        logger.info(f"✅ Retrieved dataset info for {len(dataset_info.get('available_datasets', []))} datasets")
+        return dataset_info
+        
+    except Exception as e:
+        logger.error(f"❌ Get datasets error: {e}")
+        raise HTTPException(status_code=500, detail=f"Get datasets failed: {str(e)}")
+
+@app.get("/api/chat/history")
+async def get_chat_history():
+    """Get the complete chat history"""
+    try:
+        if not chat_service:
+            return {"chat_history": []}
+        
+        history = chat_service.get_chat_history()
+        logger.info(f"✅ Retrieved chat history with {len(history)} interactions")
+        return {"chat_history": history}
+        
+    except Exception as e:
+        logger.error(f"❌ Get chat history error: {e}")
+        raise HTTPException(status_code=500, detail=f"Get chat history failed: {str(e)}")
+
+@app.post("/api/chat/clear-history")
+async def clear_chat_history():
+    """Clear the chat history"""
+    try:
+        if not chat_service:
+            return {"success": False, "message": "Chat service not initialized"}
+
+        chat_service.clear_chat_history()
+        logger.info("✅ Chat history cleared")
+        return {"success": True, "message": "Chat history cleared successfully"}
+
+    except Exception as e:
+        logger.error(f"❌ Clear chat history error: {e}")
+        raise HTTPException(status_code=500, detail=f"Clear chat history failed: {str(e)}")
+
+@app.get("/api/chat/memory-config", response_model=ChatMemoryConfigResponse)
+async def get_chat_memory_config():
+    """Get current chat memory configuration"""
+    try:
+        if not chat_service:
+            # Return default configuration if service not initialized
+            return ChatMemoryConfigResponse(
+                memory_limit=5,
+                current_history_length=0,
+                success=False,
+                message="Chat service not initialized"
+            )
+
+        memory_limit = chat_service.get_memory_limit()
+        history_length = len(chat_service.get_chat_history())
+
+        logger.info(f"✅ Retrieved chat memory config: {memory_limit} limit, {history_length} items")
+
+        return ChatMemoryConfigResponse(
+            memory_limit=memory_limit,
+            current_history_length=history_length,
+            success=True,
+            message="Memory configuration retrieved successfully"
+        )
+
+    except Exception as e:
+        logger.error(f"❌ Get chat memory config error: {e}")
+        raise HTTPException(status_code=500, detail=f"Get memory config failed: {str(e)}")
+
+@app.post("/api/chat/memory-config", response_model=ChatMemoryConfigResponse)
+async def set_chat_memory_config(request: ChatMemoryConfigRequest):
+    """Set chat memory configuration"""
+    try:
+        # Validate memory limit
+        if request.memory_limit < 1:
+            raise HTTPException(status_code=400, detail="Memory limit must be at least 1")
+
+        if request.memory_limit > 50:
+            raise HTTPException(status_code=400, detail="Memory limit cannot exceed 50")
+
+        if not chat_service:
+            # Try to initialize chat service with the new memory limit
+            if not initialize_chat_service(memory_limit=request.memory_limit):
+                return ChatMemoryConfigResponse(
+                    memory_limit=request.memory_limit,
+                    current_history_length=0,
+                    success=False,
+                    message="Failed to initialize chat service with new memory limit"
+                )
+        else:
+            # Update existing chat service memory limit
+            chat_service.set_memory_limit(request.memory_limit)
+
+        history_length = len(chat_service.get_chat_history())
+
+        logger.info(f"✅ Updated chat memory limit to {request.memory_limit}, current history: {history_length} items")
+
+        return ChatMemoryConfigResponse(
+            memory_limit=request.memory_limit,
+            current_history_length=history_length,
+            success=True,
+            message=f"Memory limit updated to {request.memory_limit} items"
+        )
+
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"❌ Set chat memory config error: {e}")
+        raise HTTPException(status_code=500, detail=f"Set memory config failed: {str(e)}")
 
 if __name__ == "__main__":
     uvicorn.run(

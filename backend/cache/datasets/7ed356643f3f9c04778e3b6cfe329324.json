@@ -1,0 +1,19 @@
+{
+  "timestamp": 1758080702.5836015,
+  "ttl": 7200,
+  "dataset_id": "knr6-vurn",
+  "sample_size": 100,
+  "shape": [
+    94,
+    7
+  ],
+  "columns": [
+    "accident_no",
+    "date",
+    "time",
+    "borough",
+    "location_1",
+    "injuries_fatalities",
+    "contributing_factors"
+  ]
+}

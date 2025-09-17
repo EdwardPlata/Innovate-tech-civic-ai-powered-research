@@ -85,6 +85,18 @@ class APIConfig:
             'cache_duration': CACHE_DURATIONS['api_responses'],
             'max_retries': 2,
             'enable_fallback': True
+        },
+        '/api/chat/memory-config': {
+            'timeout': REQUEST_TIMEOUT,
+            'cache_duration': 0,  # No caching for memory config
+            'max_retries': MAX_RETRIES,
+            'enable_fallback': False
+        },
+        '/api/chat/ask': {
+            'timeout': 90,  # Longer timeout for AI chat responses
+            'cache_duration': 300,  # Short-term caching (5 minutes)
+            'max_retries': 2,
+            'enable_fallback': False
         }
     }
 

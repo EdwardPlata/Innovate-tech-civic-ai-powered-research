@@ -24,6 +24,7 @@ import altair as alt
 # Import backend manager and AI analyst
 from components.backend_manager import get_backend_manager
 from components.ai_analyst_component import get_ai_analyst_component
+from components.dataset_chat_component import get_dataset_chat_component
 
 # Page configuration
 st.set_page_config(
@@ -316,8 +317,8 @@ def main():
 
         selected = option_menu(
             menu_title="Navigation",
-            options=["Dashboard", "Dataset Explorer", "Quality Assessment", "Relationship Mapping", "Data Sample", "AI Analysis", "AI Setup"],
-            icons=["house", "search", "clipboard-check", "diagram-3", "table", "robot", "gear"],
+            options=["Dashboard", "Dataset Explorer", "Quality Assessment", "Relationship Mapping", "Data Sample", "AI Analysis", "Dataset Chat", "AI Setup"],
+            icons=["house", "search", "clipboard-check", "diagram-3", "table", "robot", "chat", "gear"],
             default_index=0
         )
 
@@ -380,6 +381,8 @@ def main():
         show_data_sample(ai_analyst)
     elif selected == "AI Analysis":
         show_ai_analysis(ai_analyst)
+    elif selected == "Dataset Chat":
+        show_dataset_chat()
     elif selected == "AI Setup":
         show_ai_setup(ai_analyst)
 
@@ -1920,6 +1923,11 @@ def show_ai_setup(ai_analyst):
 - Enable caching for faster responses
 - Higher max tokens (2000+) for detailed analysis
 """)
+
+def show_dataset_chat():
+    """Show the dataset chat interface"""
+    chat_component = get_dataset_chat_component()
+    chat_component.render_chat_interface()
 
 if __name__ == "__main__":
     main()

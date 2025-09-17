@@ -1,115 +1,275 @@
-INFO:     Will watch for changes in these directories: ['/home/edward/code/QLT_Workshop/backend']
+INFO:     Will watch for changes in these directories: ['/workspaces/Innovate-tech-civic-ai-powered-research/backend']
 INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
-INFO:     Started reloader process [43447] using StatReload
-2025-09-16 10:12:03,629 - main - WARNING - ❌ AI Functionality not available: No module named 'AI_Functionality'
-INFO:     Started server process [43450]
+INFO:     Started reloader process [33700] using WatchFiles
+2025-09-17 03:44:09,536 - main - WARNING - ❌ AI Functionality not available: No module named 'AI_Functionality'
+INFO:     Started server process [33717]
 INFO:     Waiting for application startup.
-2025-09-16 10:12:03,654 - main - INFO - Initializing Scout Data Discovery, Cache Manager, and AI Analyst...
-2025-09-16 10:12:03,654 - cache_manager - INFO - Cache manager initialized with directory: cache
-2025-09-16 10:12:03,654 - main - INFO - ✅ Cache Manager initialized successfully
-2025-09-16 10:12:03,654 - src.scout_discovery - INFO - Enhanced NYC Data Client initialized with pandas backend
-2025-09-16 10:12:03,654 - src.scout_discovery - INFO - Enhanced NYC Data Client initialized with pandas backend
-2025-09-16 10:12:03,654 - src.scout_discovery - INFO - Initialized with enhanced API client
-2025-09-16 10:12:03,654 - src.scout_discovery - INFO - Initialized with enhanced API client
-2025-09-16 10:12:03,654 - src.scout_discovery - INFO - ScoutDataDiscovery initialized successfully
-2025-09-16 10:12:03,654 - src.scout_discovery - INFO - ScoutDataDiscovery initialized successfully
-2025-09-16 10:12:03,654 - main - INFO - ✅ Scout Data Discovery initialized successfully
+2025-09-17 03:44:09,570 - main - INFO - Initializing Scout Data Discovery, Cache Manager, and AI Analyst...
+2025-09-17 03:44:09,571 - cache_manager - INFO - Cache manager initialized with directory: cache
+2025-09-17 03:44:09,571 - main - INFO - ✅ Cache Manager initialized successfully
+2025-09-17 03:44:09,571 - src.scout_discovery - INFO - Enhanced NYC Data Client initialized with pandas backend
+2025-09-17 03:44:09,571 - src.scout_discovery - INFO - Enhanced NYC Data Client initialized with pandas backend
+2025-09-17 03:44:09,571 - src.scout_discovery - INFO - Initialized with enhanced API client
+2025-09-17 03:44:09,571 - src.scout_discovery - INFO - Initialized with enhanced API client
+2025-09-17 03:44:09,571 - src.scout_discovery - INFO - ScoutDataDiscovery initialized successfully
+2025-09-17 03:44:09,571 - src.scout_discovery - INFO - ScoutDataDiscovery initialized successfully
+2025-09-17 03:44:09,571 - main - INFO - ✅ Scout Data Discovery initialized successfully
 INFO:     Application startup complete.
-INFO:     127.0.0.1:37070 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:39310 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:39318 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:39326 - "GET /api/stats HTTP/1.1" 200 OK
-2025-09-16 10:12:13,320 - main - INFO - Fetching top 10 updated datasets...
-2025-09-16 10:12:13,321 - src.scout_discovery - INFO - Searching for datasets: ['311', 'health', 'transportation', 'housing', 'business', 'education'] in domains: ['data.cityofnewyork.us']
-2025-09-16 10:12:13,321 - src.scout_discovery - INFO - Searching for datasets: ['311', 'health', 'transportation', 'housing', 'business', 'education'] in domains: ['data.cityofnewyork.us']
-INFO:     127.0.0.1:39338 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:39342 - "GET /api/health HTTP/1.1" 200 OK
-2025-09-16 10:12:20,875 - src.scout_discovery - INFO - Found 120 unique datasets (120 total before deduplication)
-2025-09-16 10:12:20,875 - src.scout_discovery - INFO - Found 120 unique datasets (120 total before deduplication)
-2025-09-16 10:12:20,880 - main - INFO - ✅ Retrieved 10 updated datasets
-INFO:     127.0.0.1:39336 - "GET /api/datasets/top-updated?limit=10 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50554 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50556 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50566 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50574 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50586 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50600 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50602 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50618 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:44520 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:44530 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:44546 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:44560 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:44568 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:44578 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:36228 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:36230 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:36240 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:36252 - "GET /api/health HTTP/1.1" 200 OK
-2025-09-16 10:12:58,295 - main - INFO - Searching datasets: ['motor']
-2025-09-16 10:12:58,295 - src.scout_discovery - INFO - Searching for datasets: ['motor'] in domains: ['data.cityofnewyork.us']
-2025-09-16 10:12:58,295 - src.scout_discovery - INFO - Searching for datasets: ['motor'] in domains: ['data.cityofnewyork.us']
-2025-09-16 10:12:59,402 - src.scout_discovery - INFO - Found 8 unique datasets (8 total before deduplication)
-2025-09-16 10:12:59,402 - src.scout_discovery - INFO - Found 8 unique datasets (8 total before deduplication)
-2025-09-16 10:12:59,403 - main - INFO - ✅ Found 8 datasets
-INFO:     127.0.0.1:36254 - "POST /api/datasets/search HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53560 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53564 - "GET /api/health HTTP/1.1" 200 OK
-2025-09-16 10:13:02,076 - main - INFO - Getting sample for dataset: h9gi-nx95
-2025-09-16 10:13:02,076 - src.scout_discovery - INFO - Fetching dataset h9gi-nx95 with 1 parameters
-2025-09-16 10:13:02,076 - src.scout_discovery - INFO - Fetching dataset h9gi-nx95 with 1 parameters
-2025-09-16 10:13:02,919 - src.scout_discovery - INFO - Retrieved 100 rows, 27 columns as pandas DataFrame
-2025-09-16 10:13:02,919 - src.scout_discovery - INFO - Retrieved 100 rows, 27 columns as pandas DataFrame
-2025-09-16 10:13:02,919 - src.scout_discovery - INFO - Downloaded 100 rows using enhanced client
-2025-09-16 10:13:02,919 - src.scout_discovery - INFO - Downloaded 100 rows using enhanced client
-2025-09-16 10:13:02,925 - main - INFO - ✅ Retrieved sample: 100 rows
-INFO:     127.0.0.1:53578 - "GET /api/datasets/h9gi-nx95/sample?sample_size=100 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53588 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53604 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53620 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53628 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:45262 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:45266 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:45276 - "POST /api/ai/analyze HTTP/1.1" 422 Unprocessable Content
-INFO:     127.0.0.1:53074 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53080 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53096 - "GET /api/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53100 - "GET /api/health HTTP/1.1" 200 OK
-WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     127.0.0.1:34052 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     98.113.148.235:0 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43962 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43968 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43980 - "GET /api/stats HTTP/1.1" 200 OK
+2025-09-17 03:44:28,626 - main - INFO - Fetching top 10 updated datasets...
+2025-09-17 03:44:28,629 - src.scout_discovery - INFO - Searching for datasets: ['311', 'health', 'transportation', 'housing', 'business', 'education'] in domains: ['data.cityofnewyork.us']
+2025-09-17 03:44:28,629 - src.scout_discovery - INFO - Searching for datasets: ['311', 'health', 'transportation', 'housing', 'business', 'education'] in domains: ['data.cityofnewyork.us']
+INFO:     127.0.0.1:45072 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45088 - "GET /api/health HTTP/1.1" 200 OK
+2025-09-17 03:44:35,302 - src.scout_discovery - INFO - Found 120 unique datasets (120 total before deduplication)
+2025-09-17 03:44:35,302 - src.scout_discovery - INFO - Found 120 unique datasets (120 total before deduplication)
+2025-09-17 03:44:35,308 - main - INFO - ✅ Retrieved 10 updated datasets
+INFO:     127.0.0.1:43982 - "GET /api/datasets/top-updated?limit=10 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45096 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45108 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45110 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45112 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36874 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36878 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36882 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36894 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56164 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56168 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56170 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56184 - "GET /api/health HTTP/1.1" 200 OK
+2025-09-17 03:44:58,495 - main - INFO - Searching datasets: ['accidents']
+2025-09-17 03:44:58,495 - src.scout_discovery - INFO - Searching for datasets: ['accidents'] in domains: ['data.cityofnewyork.us']
+2025-09-17 03:44:58,495 - src.scout_discovery - INFO - Searching for datasets: ['accidents'] in domains: ['data.cityofnewyork.us']
+2025-09-17 03:44:59,546 - src.scout_discovery - INFO - Found 8 unique datasets (8 total before deduplication)
+2025-09-17 03:44:59,546 - src.scout_discovery - INFO - Found 8 unique datasets (8 total before deduplication)
+2025-09-17 03:44:59,547 - main - INFO - ✅ Found 8 datasets
+INFO:     127.0.0.1:56200 - "POST /api/datasets/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56212 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56224 - "GET /api/health HTTP/1.1" 200 OK
+2025-09-17 03:45:01,896 - main - INFO - Getting sample for dataset: knr6-vurn
+2025-09-17 03:45:01,897 - src.scout_discovery - INFO - Fetching dataset knr6-vurn with 1 parameters
+2025-09-17 03:45:01,897 - src.scout_discovery - INFO - Fetching dataset knr6-vurn with 1 parameters
+2025-09-17 03:45:02,583 - src.scout_discovery - INFO - Retrieved 94 rows, 7 columns as pandas DataFrame
+2025-09-17 03:45:02,583 - src.scout_discovery - INFO - Retrieved 94 rows, 7 columns as pandas DataFrame
+2025-09-17 03:45:02,583 - src.scout_discovery - INFO - Downloaded 94 rows using enhanced client
+2025-09-17 03:45:02,583 - src.scout_discovery - INFO - Downloaded 94 rows using enhanced client
+2025-09-17 03:45:02,586 - main - INFO - ✅ Retrieved sample: 94 rows
+INFO:     127.0.0.1:56240 - "GET /api/datasets/knr6-vurn/sample?sample_size=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56924 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56932 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56944 - "POST /api/ai/analyze HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:60728 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60742 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48392 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48396 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48400 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48410 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48426 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48436 - "GET /api/health HTTP/1.1" 200 OK
+2025-09-17 03:46:11,892 - main - INFO - Searching datasets: ['accident']
+2025-09-17 03:46:11,893 - src.scout_discovery - INFO - Searching for datasets: ['accident'] in domains: ['data.cityofnewyork.us']
+2025-09-17 03:46:11,893 - src.scout_discovery - INFO - Searching for datasets: ['accident'] in domains: ['data.cityofnewyork.us']
+2025-09-17 03:46:13,039 - src.scout_discovery - INFO - Found 8 unique datasets (8 total before deduplication)
+2025-09-17 03:46:13,039 - src.scout_discovery - INFO - Found 8 unique datasets (8 total before deduplication)
+2025-09-17 03:46:13,040 - main - INFO - ✅ Found 8 datasets
+INFO:     127.0.0.1:48442 - "POST /api/datasets/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52098 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52106 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52114 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52130 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52136 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52142 - "GET /api/health HTTP/1.1" 200 OK
+2025-09-17 03:46:21,610 - main - INFO - Assessing quality for dataset: knr6-vurn
+2025-09-17 03:46:21,611 - src.scout_discovery - INFO - Fetching dataset knr6-vurn with 1 parameters
+2025-09-17 03:46:21,611 - src.scout_discovery - INFO - Fetching dataset knr6-vurn with 1 parameters
+2025-09-17 03:46:21,737 - src.scout_discovery - INFO - Retrieved 94 rows, 7 columns as pandas DataFrame
+2025-09-17 03:46:21,737 - src.scout_discovery - INFO - Retrieved 94 rows, 7 columns as pandas DataFrame
+2025-09-17 03:46:21,737 - src.scout_discovery - INFO - Downloaded 94 rows using enhanced client
+2025-09-17 03:46:21,737 - src.scout_discovery - INFO - Downloaded 94 rows using enhanced client
+2025-09-17 03:46:21,737 - src.scout_discovery - INFO - Assessing quality for dataset knr6-vurn
+2025-09-17 03:46:21,737 - src.scout_discovery - INFO - Assessing quality for dataset knr6-vurn
+2025-09-17 03:46:21,738 - src.scout_discovery - INFO - Starting quality assessment for dataset knr6-vurn
+2025-09-17 03:46:21,738 - src.scout_discovery - INFO - Starting quality assessment for dataset knr6-vurn
+2025-09-17 03:46:21,755 - src.scout_discovery - INFO - Quality assessment completed for knr6-vurn. Overall score: 96.17
+2025-09-17 03:46:21,755 - src.scout_discovery - INFO - Quality assessment completed for knr6-vurn. Overall score: 96.17
+2025-09-17 03:46:21,755 - main - INFO - ✅ Quality assessment completed: 96.2/100
+INFO:     127.0.0.1:52158 - "GET /api/datasets/knr6-vurn/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52166 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42608 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42624 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42638 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42640 - "GET /api/health HTTP/1.1" 200 OK
+2025-09-17 03:46:24,940 - main - INFO - Finding relationships for dataset: knr6-vurn
+2025-09-17 03:46:24,944 - src.scout_discovery - INFO - Searching for datasets: ['311', 'health', 'transportation', 'housing', 'business', 'education'] in domains: ['data.cityofnewyork.us']
+2025-09-17 03:46:24,944 - src.scout_discovery - INFO - Searching for datasets: ['311', 'health', 'transportation', 'housing', 'business', 'education'] in domains: ['data.cityofnewyork.us']
+2025-09-17 03:46:31,608 - src.scout_discovery - INFO - Found 150 unique datasets (150 total before deduplication)
+2025-09-17 03:46:31,608 - src.scout_discovery - INFO - Found 150 unique datasets (150 total before deduplication)
+2025-09-17 03:46:31,609 - main - INFO - Using fast similarity matching for 150 datasets
+2025-09-17 03:46:31,620 - main - INFO - ✅ Found 10 related datasets
+INFO:     127.0.0.1:42650 - "POST /api/datasets/relationships HTTP/1.1" 200 OK
+2025-09-17 03:46:31,624 - main - INFO - Creating network visualization for: knr6-vurn
+2025-09-17 03:46:31,625 - main - INFO - Finding relationships for dataset: knr6-vurn
+2025-09-17 03:46:31,625 - src.scout_discovery - INFO - Searching for datasets: ['311', 'health', 'transportation', 'housing', 'business', 'education'] in domains: ['data.cityofnewyork.us']
+2025-09-17 03:46:31,625 - src.scout_discovery - INFO - Searching for datasets: ['311', 'health', 'transportation', 'housing', 'business', 'education'] in domains: ['data.cityofnewyork.us']
+2025-09-17 03:46:38,032 - src.scout_discovery - INFO - Found 150 unique datasets (150 total before deduplication)
+2025-09-17 03:46:38,032 - src.scout_discovery - INFO - Found 150 unique datasets (150 total before deduplication)
+2025-09-17 03:46:38,033 - main - INFO - Using fast similarity matching for 150 datasets
+2025-09-17 03:46:38,043 - main - INFO - ✅ Found 0 related datasets
+2025-09-17 03:46:38,043 - src.scout_discovery - INFO - Searching for datasets: ['data'] in domains: ['data.cityofnewyork.us']
+2025-09-17 03:46:38,043 - src.scout_discovery - INFO - Searching for datasets: ['data'] in domains: ['data.cityofnewyork.us']
+2025-09-17 03:46:39,300 - src.scout_discovery - INFO - Found 200 unique datasets (200 total before deduplication)
+2025-09-17 03:46:39,300 - src.scout_discovery - INFO - Found 200 unique datasets (200 total before deduplication)
+2025-09-17 03:46:39,301 - main - INFO - ✅ Generated network visualization with 1 nodes
+INFO:     127.0.0.1:42664 - "GET /api/network/visualization/knr6-vurn HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58982 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58998 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59000 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59008 - "GET /api/health HTTP/1.1" 200 OK
+2025-09-17 03:47:28,153 - main - INFO - Getting sample for dataset: knr6-vurn
+2025-09-17 03:47:28,153 - src.scout_discovery - INFO - Fetching dataset knr6-vurn with 1 parameters
+2025-09-17 03:47:28,153 - src.scout_discovery - INFO - Fetching dataset knr6-vurn with 1 parameters
+2025-09-17 03:47:28,414 - src.scout_discovery - INFO - Retrieved 94 rows, 7 columns as pandas DataFrame
+2025-09-17 03:47:28,414 - src.scout_discovery - INFO - Retrieved 94 rows, 7 columns as pandas DataFrame
+2025-09-17 03:47:28,415 - src.scout_discovery - INFO - Downloaded 94 rows using enhanced client
+2025-09-17 03:47:28,415 - src.scout_discovery - INFO - Downloaded 94 rows using enhanced client
+2025-09-17 03:47:28,417 - main - INFO - ✅ Retrieved sample: 94 rows
+INFO:     127.0.0.1:59020 - "GET /api/datasets/knr6-vurn/sample?sample_size=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59032 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53250 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53264 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53280 - "POST /api/ai/dataset-chat HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53294 - "POST /api/ai/dataset-chat HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53304 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59112 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59126 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59132 - "POST /api/ai/dataset-chat HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59140 - "POST /api/ai/dataset-chat HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59156 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60016 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60030 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60042 - "POST /api/ai/dataset-chat HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "POST /api/ai/dataset-chat HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60060 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46902 - "GET /api/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47926 - "GET /api/chat/memory-config HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50926 - "GET /api/ai/config HTTP/1.1" 200 OK
+INFO:     Will watch for changes in these directories: ['/workspaces/Innovate-tech-civic-ai-powered-research/backend']
+INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+INFO:     Started reloader process [11124] using WatchFiles
+2025-09-17 04:07:14,566 - main - WARNING - ❌ AI Functionality not available: No module named 'AI_Functionality'
+INFO:     Started server process [11143]
+INFO:     Waiting for application startup.
+2025-09-17 04:07:14,605 - main - INFO - Initializing Scout Data Discovery, Cache Manager, and AI Analyst...
+2025-09-17 04:07:14,605 - cache_manager - INFO - Cache manager initialized with directory: cache
+2025-09-17 04:07:14,605 - main - INFO - ✅ Cache Manager initialized successfully
+2025-09-17 04:07:14,605 - src.scout_discovery - INFO - Enhanced NYC Data Client initialized with pandas backend
+2025-09-17 04:07:14,605 - src.scout_discovery - INFO - Enhanced NYC Data Client initialized with pandas backend
+2025-09-17 04:07:14,606 - src.scout_discovery - INFO - Initialized with enhanced API client
+2025-09-17 04:07:14,606 - src.scout_discovery - INFO - Initialized with enhanced API client
+2025-09-17 04:07:14,606 - src.scout_discovery - INFO - ScoutDataDiscovery initialized successfully
+2025-09-17 04:07:14,606 - src.scout_discovery - INFO - ScoutDataDiscovery initialized successfully
+2025-09-17 04:07:14,606 - main - INFO - ✅ Scout Data Discovery initialized successfully
+INFO:     Application startup complete.
+INFO:     98.113.148.235:0 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49560 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60076 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58122 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58138 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58146 - "GET /api/stats HTTP/1.1" 200 OK
+2025-09-17 04:10:37,516 - main - INFO - Fetching top 10 updated datasets...
+2025-09-17 04:10:37,523 - src.scout_discovery - INFO - Searching for datasets: ['311', 'health', 'transportation', 'housing', 'business', 'education'] in domains: ['data.cityofnewyork.us']
+2025-09-17 04:10:37,523 - src.scout_discovery - INFO - Searching for datasets: ['311', 'health', 'transportation', 'housing', 'business', 'education'] in domains: ['data.cityofnewyork.us']
+2025-09-17 04:10:44,087 - src.scout_discovery - INFO - Found 120 unique datasets (120 total before deduplication)
+2025-09-17 04:10:44,087 - src.scout_discovery - INFO - Found 120 unique datasets (120 total before deduplication)
+2025-09-17 04:10:44,099 - main - INFO - ✅ Retrieved 10 updated datasets
+INFO:     127.0.0.1:58162 - "GET /api/datasets/top-updated?limit=10 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48810 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48818 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48826 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48834 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48848 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48864 - "GET /api/health HTTP/1.1" 200 OK
+2025-09-17 04:10:53,665 - main - INFO - Searching datasets: ['accidents']
+2025-09-17 04:10:53,665 - src.scout_discovery - INFO - Searching for datasets: ['accidents'] in domains: ['data.cityofnewyork.us']
+2025-09-17 04:10:53,665 - src.scout_discovery - INFO - Searching for datasets: ['accidents'] in domains: ['data.cityofnewyork.us']
+2025-09-17 04:10:54,717 - src.scout_discovery - INFO - Found 8 unique datasets (8 total before deduplication)
+2025-09-17 04:10:54,717 - src.scout_discovery - INFO - Found 8 unique datasets (8 total before deduplication)
+2025-09-17 04:10:54,718 - main - INFO - ✅ Found 8 datasets
+INFO:     127.0.0.1:48868 - "POST /api/datasets/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48872 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48886 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35306 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35316 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35322 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35324 - "GET /api/health HTTP/1.1" 200 OK
+2025-09-17 04:11:01,376 - main - INFO - Assessing quality for dataset: knr6-vurn
+2025-09-17 04:11:01,377 - src.scout_discovery - INFO - Fetching dataset knr6-vurn with 1 parameters
+2025-09-17 04:11:01,377 - src.scout_discovery - INFO - Fetching dataset knr6-vurn with 1 parameters
+2025-09-17 04:11:01,846 - src.scout_discovery - INFO - Retrieved 94 rows, 7 columns as pandas DataFrame
+2025-09-17 04:11:01,846 - src.scout_discovery - INFO - Retrieved 94 rows, 7 columns as pandas DataFrame
+2025-09-17 04:11:01,846 - src.scout_discovery - INFO - Downloaded 94 rows using enhanced client
+2025-09-17 04:11:01,846 - src.scout_discovery - INFO - Downloaded 94 rows using enhanced client
+2025-09-17 04:11:01,846 - src.scout_discovery - INFO - Assessing quality for dataset knr6-vurn
+2025-09-17 04:11:01,846 - src.scout_discovery - INFO - Assessing quality for dataset knr6-vurn
+2025-09-17 04:11:01,846 - src.scout_discovery - INFO - Starting quality assessment for dataset knr6-vurn
+2025-09-17 04:11:01,846 - src.scout_discovery - INFO - Starting quality assessment for dataset knr6-vurn
+2025-09-17 04:11:01,869 - src.scout_discovery - INFO - Quality assessment completed for knr6-vurn. Overall score: 96.17
+2025-09-17 04:11:01,869 - src.scout_discovery - INFO - Quality assessment completed for knr6-vurn. Overall score: 96.17
+2025-09-17 04:11:01,869 - main - INFO - ✅ Quality assessment completed: 96.2/100
+INFO:     127.0.0.1:35338 - "GET /api/datasets/knr6-vurn/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35340 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35344 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35348 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35364 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35378 - "GET /api/health HTTP/1.1" 200 OK
+2025-09-17 04:11:03,258 - main - INFO - Finding relationships for dataset: knr6-vurn
+2025-09-17 04:11:03,260 - main - INFO - ✅ Retrieved relationships from cache
+INFO:     127.0.0.1:35386 - "POST /api/datasets/relationships HTTP/1.1" 200 OK
+2025-09-17 04:11:03,266 - main - INFO - Creating network visualization for: knr6-vurn
+2025-09-17 04:11:03,275 - main - INFO - ✅ Retrieved network visualization from cache
+INFO:     127.0.0.1:35388 - "GET /api/network/visualization/knr6-vurn HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60746 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60754 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60762 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60778 - "GET /api/health HTTP/1.1" 200 OK
+2025-09-17 04:11:15,531 - main - INFO - Getting sample for dataset: knr6-vurn
+2025-09-17 04:11:15,537 - main - INFO - ✅ Retrieved cached sample: 94 rows
+INFO:     127.0.0.1:60784 - "GET /api/datasets/knr6-vurn/sample?sample_size=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60800 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39820 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39834 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39846 - "POST /api/ai/dataset-chat HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:39856 - "POST /api/ai/dataset-chat HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:39868 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39874 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39880 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39882 - "POST /api/ai/dataset-chat HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:39892 - "POST /api/ai/dataset-chat HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:39900 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35316 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35328 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52522 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52528 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52532 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52534 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52540 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52544 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42022 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42028 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42036 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42052 - "GET /api/health HTTP/1.1" 200 OK
+2025-09-17 04:12:31,445 - main - INFO - Getting sample for dataset: knr6-vurn
+2025-09-17 04:12:31,448 - main - INFO - ✅ Retrieved cached sample: 94 rows
+INFO:     127.0.0.1:42056 - "GET /api/datasets/knr6-vurn/sample?sample_size=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42070 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42076 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55434 - "GET /api/health HTTP/1.1" 200 OK
 INFO:     Shutting down
 INFO:     Waiting for application shutdown.
 INFO:     Application shutdown complete.
-INFO:     Finished server process [43450]
-2025-09-16 10:26:46,825 - main - WARNING - ❌ AI Functionality not available: No module named 'AI_Functionality'
-INFO:     Started server process [49595]
-INFO:     Waiting for application startup.
-2025-09-16 10:26:46,853 - main - INFO - Initializing Scout Data Discovery, Cache Manager, and AI Analyst...
-2025-09-16 10:26:46,854 - cache_manager - INFO - Cache manager initialized with directory: cache
-2025-09-16 10:26:46,854 - main - INFO - ✅ Cache Manager initialized successfully
-2025-09-16 10:26:46,854 - src.scout_discovery - INFO - Enhanced NYC Data Client initialized with pandas backend
-2025-09-16 10:26:46,854 - src.scout_discovery - INFO - Enhanced NYC Data Client initialized with pandas backend
-2025-09-16 10:26:46,854 - src.scout_discovery - INFO - Initialized with enhanced API client
-2025-09-16 10:26:46,854 - src.scout_discovery - INFO - Initialized with enhanced API client
-2025-09-16 10:26:46,854 - src.scout_discovery - INFO - ScoutDataDiscovery initialized successfully
-2025-09-16 10:26:46,854 - src.scout_discovery - INFO - ScoutDataDiscovery initialized successfully
-2025-09-16 10:26:46,854 - main - INFO - ✅ Scout Data Discovery initialized successfully
-INFO:     Application startup complete.
-WARNING:  StatReload detected changes in 'main.py'. Reloading...
-INFO:     Shutting down
-INFO:     Waiting for application shutdown.
-INFO:     Application shutdown complete.
-INFO:     Finished server process [49595]
-2025-09-16 10:27:13,036 - main - WARNING - ❌ AI Functionality not available: No module named 'AI_Functionality'
-INFO:     Started server process [49799]
-INFO:     Waiting for application startup.
-2025-09-16 10:27:13,067 - main - INFO - Initializing Scout Data Discovery, Cache Manager, and AI Analyst...
-2025-09-16 10:27:13,068 - cache_manager - INFO - Cache manager initialized with directory: cache
-2025-09-16 10:27:13,068 - main - INFO - ✅ Cache Manager initialized successfully
-2025-09-16 10:27:13,068 - src.scout_discovery - INFO - Enhanced NYC Data Client initialized with pandas backend
-2025-09-16 10:27:13,068 - src.scout_discovery - INFO - Enhanced NYC Data Client initialized with pandas backend
-2025-09-16 10:27:13,068 - src.scout_discovery - INFO - Initialized with enhanced API client
-2025-09-16 10:27:13,068 - src.scout_discovery - INFO - Initialized with enhanced API client
-2025-09-16 10:27:13,068 - src.scout_discovery - INFO - ScoutDataDiscovery initialized successfully
-2025-09-16 10:27:13,068 - src.scout_discovery - INFO - ScoutDataDiscovery initialized successfully
-2025-09-16 10:27:13,069 - main - INFO - ✅ Scout Data Discovery initialized successfully
-INFO:     Application startup complete.
+INFO:     Finished server process [11143]
+INFO:     Stopping reloader process [11124]

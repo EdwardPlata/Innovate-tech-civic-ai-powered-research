@@ -1,0 +1,103 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pdb
+*.egg-info/
+*.egg
+*.env
+.env
+venv/
+ENV/
+.envrc
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# VS Code
+.vscode/
+.code-workspace
+
+# Logs
+*.log
+# Ignore all markdown files except those starting with README
+*.md
+!README*.md
+!**/README*.md
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Cache
+.cache/
+.cache
+.cache/*
+
+# Data
+*.csv
+*.tsv
+*.xls
+*.xlsx
+*.parquet
+*.h5
+*.db
+*.sqlite
+*.sqlite3
+*.bak
+*.tmp
+
+# HTML maps
+maps/*.html
+
+# Test outputs
+*.out
+*.err
+
+# Subrepos
+subrepos/
+
+# Misc
+*.zip
+# Ignore all markdown files except README
+*.md
+!README.md
+!**/README.md
+# Secrets & Keys
+*key*
+*secret*
+*token*
+*credentials*
+*password*
+*.pem
+*.crt
+*.key
+*.env*
+secrets.json
+credentials.json
+*.tar.gz
+*.tar
+*.gz
+*.bz2
+*.xz
+
+# Scout
+scout_data_discovery/__pycache__/
+
+# AI
+AI_Functionality/__pycache__/
+
+# Backend
+backend/__pycache__/
+
+# Frontend
+frontend/__pycache__/
+
+# Notebooks
+notebooks/*_checkpoint.ipynb
+
+# Ignore versioned folders
+=*

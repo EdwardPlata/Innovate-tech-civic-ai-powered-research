@@ -1,0 +1,25 @@
+{
+  "timestamp": 1758070540.4193494,
+  "ttl": 7200,
+  "dataset_id": "i4gi-tjb9",
+  "sample_size": 1000,
+  "shape": [
+    1000,
+    13
+  ],
+  "columns": [
+    "id",
+    "speed",
+    "travel_time",
+    "status",
+    "data_as_of",
+    "link_id",
+    "link_points",
+    "encoded_poly_line",
+    "encoded_poly_line_lvls",
+    "owner",
+    "transcom_id",
+    "borough",
+    "link_name"
+  ]
+}

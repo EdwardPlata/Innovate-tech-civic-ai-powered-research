@@ -12,11 +12,19 @@ from enum import Enum
 import os
 from pathlib import Path
 
-from .base_provider import BaseAIProvider, AIRequest, AIResponse
-from .cache_manager import CacheManager
-from ..providers.openai_provider import OpenAIProvider
-from ..providers.openrouter_provider import OpenRouterProvider
-from ..providers.nvidia_provider import NvidiaProvider
+try:
+    from .base_provider import BaseAIProvider, AIRequest, AIResponse
+    from .cache_manager import CacheManager
+    from ..providers.openai_provider import OpenAIProvider
+    from ..providers.openrouter_provider import OpenRouterProvider
+    from ..providers.nvidia_provider import NvidiaProvider
+except ImportError:
+    # Fallback to absolute imports
+    from core.base_provider import BaseAIProvider, AIRequest, AIResponse
+    from core.cache_manager import CacheManager
+    from providers.openai_provider import OpenAIProvider
+    from providers.openrouter_provider import OpenRouterProvider
+    from providers.nvidia_provider import NvidiaProvider
 
 
 logger = logging.getLogger(__name__)

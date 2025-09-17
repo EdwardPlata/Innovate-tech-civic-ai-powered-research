@@ -13,16 +13,31 @@ Features:
 - Multi-provider fallback
 """
 
-from .core.ai_analyst import DataAnalyst
-from .core.cache_manager import CacheManager
-from .providers.openai_provider import OpenAIProvider
-from .providers.openrouter_provider import OpenRouterProvider
-from .providers.nvidia_provider import NvidiaProvider
+try:
+    from .core.ai_analyst import DataAnalyst
+    from .core.cache_manager import CacheManager
+    from .providers.openai_provider import OpenAIProvider
+    from .providers.openrouter_provider import OpenRouterProvider
+    from .providers.nvidia_provider import NvidiaProvider
+except ImportError:
+    # Fallback for when module is run directly
+    from core.ai_analyst import DataAnalyst
+    from core.cache_manager import CacheManager
+    from providers.openai_provider import OpenAIProvider
+    from providers.openrouter_provider import OpenRouterProvider
+    from providers.nvidia_provider import NvidiaProvider
+
+# Import AnalysisType for easy access
+try:
+    from .core.ai_analyst import AnalysisType
+except ImportError:
+    from core.ai_analyst import AnalysisType
 
 __version__ = "1.0.0"
 
 __all__ = [
     "DataAnalyst",
+    "AnalysisType",
     "CacheManager",
     "OpenAIProvider",
     "OpenRouterProvider",

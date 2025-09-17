@@ -1,0 +1,27 @@
+{
+  "timestamp": 1758070794.7385867,
+  "ttl": 7200,
+  "dataset_id": "eabe-havv",
+  "sample_size": 500,
+  "shape": [
+    500,
+    15
+  ],
+  "columns": [
+    "complaint_number",
+    "status",
+    "date_entered",
+    "house_number",
+    "house_street",
+    "zip_code",
+    "bin",
+    "community_board",
+    "complaint_category",
+    "unit",
+    "disposition_date",
+    "disposition_code",
+    "inspection_date",
+    "dobrundate",
+    "special_district"
+  ]
+}

@@ -16,7 +16,10 @@ try:
 except ImportError:
     OPENAI_AVAILABLE = False
 
-from ..core.base_provider import BaseAIProvider, AIRequest, AIResponse
+try:
+    from ..core.base_provider import BaseAIProvider, AIRequest, AIResponse
+except ImportError:
+    from core.base_provider import BaseAIProvider, AIRequest, AIResponse
 
 
 logger = logging.getLogger(__name__)
