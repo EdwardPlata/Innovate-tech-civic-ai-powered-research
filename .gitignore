@@ -103,3 +103,5 @@ notebooks/*_checkpoint.ipynb
 
 # Ignore versioned folders
 =*
+# Claude interaction files
+CLAUDE.md
