@@ -12,6 +12,7 @@ __pycache__/
 venv/
 ENV/
 .envrc
+.venv
 
 # Jupyter Notebooks
 .ipynb_checkpoints/
