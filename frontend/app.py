@@ -24,6 +24,15 @@ import altair as alt
 # Import backend manager and AI analyst
 from components.backend_manager import get_backend_manager
 from components.ai_analyst_component import get_ai_analyst_component
+from components.visualization_utils import (
+    create_optimized_quality_gauge,
+    create_optimized_network_visualization,
+    create_optimized_pie_chart,
+    create_optimized_bar_chart,
+    render_optimized_dataframe,
+    prepare_table_data,
+    format_large_number
+)
 
 # Page configuration
 st.set_page_config(
@@ -115,13 +124,8 @@ def fetch_api_data(endpoint: str, method: str = "GET", data: Dict = None) -> Dic
         return {}
 
 def format_number(num):
-    """Format numbers for display"""
-    if num >= 1000000:
-        return f"{num/1000000:.1f}M"
-    elif num >= 1000:
-        return f"{num/1000:.1f}K"
-    else:
-        return str(num)
+    """Format numbers for display - uses optimized version"""
+    return format_large_number(num)
 
 def get_quality_class(score):
     """Get CSS class for quality score"""
@@ -445,7 +449,7 @@ def show_dashboard(ai_analyst):
         categories_data[cat] = categories_data.get(cat, 0) + 1
 
     if categories_data:
-        fig_pie = px.pie(
+        fig_pie = create_optimized_pie_chart(
             values=list(categories_data.values()),
             names=list(categories_data.keys()),
             title="Distribution of Dataset Categories"
@@ -635,7 +639,7 @@ def show_quality_assessment(ai_analyst):
             st.markdown(f"**Grade: {quality['grade']}**")
 
         with col2:
-            gauge_fig = create_quality_gauge(quality['overall_score'], "Overall Quality")
+            gauge_fig = create_optimized_quality_gauge(quality['overall_score'], "Overall Quality")
             st.plotly_chart(gauge_fig, use_container_width=True)
 
         # Detailed breakdown
@@ -652,15 +656,13 @@ def show_quality_assessment(ai_analyst):
             ]
         })
 
-        fig_bar = px.bar(
+        fig_bar = create_optimized_bar_chart(
             scores_df,
-            x='Dimension',
-            y='Score',
+            x_col='Dimension',
+            y_col='Score',
             title='Quality Scores by Dimension',
-            color='Score',
-            color_continuous_scale='RdYlGn'
+            color_col='Score'
         )
-        fig_bar.update_layout(showlegend=False)
         st.plotly_chart(fig_bar, use_container_width=True)
 
         # Insights
@@ -733,7 +735,7 @@ def show_relationship_mapping(ai_analyst):
 
             network_data = fetch_api_data(f"network/visualization/{dataset['id']}")
             if network_data:
-                network_fig = create_network_visualization(network_data)
+                network_fig = create_optimized_network_visualization(network_data)
                 st.plotly_chart(network_fig, use_container_width=True)
 
             # Related datasets table
