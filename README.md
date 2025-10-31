@@ -154,23 +154,32 @@ Innovate-tech-civic-ai-powered-research/
 ### Prerequisites
 
 - Python 3.8+
-- pip or conda for package management
+- UV (recommended) or pip for package management
 
 ### 1. Install Dependencies
 
+The platform now uses UV for faster package management. Dependencies will be installed automatically when you run the setup or startup scripts.
+
+Alternatively, install manually:
+
 ```bash
+# Install UV (if not already installed)
+pip install uv
+
 # Install Scout Data Discovery core
 cd scout_data_discovery
-pip install -r requirements.txt
+uv pip install -r requirements.txt --target $(python3 -m site --user-site)
 
 # Install backend dependencies
 cd ../backend
-pip install -r requirements.txt
+uv pip install -r requirements.txt --target $(python3 -m site --user-site)
 
 # Install frontend dependencies
 cd ../frontend
-pip install -r requirements.txt
+uv pip install -r requirements.txt --target $(python3 -m site --user-site)
 ```
+
+**Note:** The automated scripts (run.sh, setup.sh, start_scout.sh) handle UV installation and dependency management automatically.
 
 ### 2. Launch the Platform
 
@@ -216,6 +225,12 @@ No need to manually start the backend - everything is controlled from the web in
 - **Caching**: Intelligent caching for improved performance
 - **CORS Support**: Cross-origin requests from frontend
 - **Auto Documentation**: Swagger/OpenAPI docs at `/docs`
+- **UV Package Manager**: Fast, reliable dependency management with UV
+
+### ⚡ Performance
+- **UV Package Manager**: Significantly faster package installation and resolution
+- **Automatic Dependency Management**: All startup scripts handle UV installation and usage
+- **Optimized Caching**: Built-in cache management for both packages and data
 
 ## 📊 Use Cases
 

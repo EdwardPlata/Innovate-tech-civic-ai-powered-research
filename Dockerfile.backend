@@ -7,21 +7,21 @@ WORKDIR /app
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
-    PIP_NO_CACHE_DIR=1 \
-    PIP_DISABLE_PIP_VERSION_CHECK=1
+    UV_SYSTEM_PYTHON=1
 
-# Install system dependencies
+# Install system dependencies and UV
 RUN apt-get update && apt-get install -y --no-install-recommends \
     gcc \
     g++ \
     curl \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* \
+    && pip install --no-cache-dir uv
 
 # Copy requirements first for better caching
 COPY backend/requirements.txt /app/backend/requirements.txt
 
-# Install Python dependencies
-RUN pip install --no-cache-dir -r /app/backend/requirements.txt
+# Install Python dependencies using UV
+RUN uv pip install --no-cache -r /app/backend/requirements.txt
 
 # Copy Scout Data Discovery library
 COPY scout_data_discovery /app/scout_data_discovery
