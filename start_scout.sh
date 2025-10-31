@@ -114,7 +114,8 @@ start_backend() {
     # Check for requirements
     if [ -f "requirements.txt" ] && ! python -c "import uvicorn, fastapi" 2>/dev/null; then
         print_status "Installing backend dependencies..."
-        pip install -r requirements.txt
+        USER_SITE=$(python3 -m site --user-site)
+        uv pip install -r requirements.txt --target "$USER_SITE"
     fi
 
     # Start backend in background
@@ -163,7 +164,8 @@ start_frontend() {
     # Check for requirements
     if [ -f "requirements.txt" ] && ! python -c "import streamlit" 2>/dev/null; then
         print_status "Installing frontend dependencies..."
-        pip install -r requirements.txt
+        USER_SITE=$(python3 -m site --user-site)
+        uv pip install -r requirements.txt --target "$USER_SITE"
     fi
 
     # Start frontend in background
