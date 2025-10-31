@@ -697,7 +697,7 @@ def show_relationship_mapping(ai_analyst):
     st.subheader(f"Finding relationships for: {dataset['name'][:50]}...")
 
     # Relationship parameters
-    col1, col2 = st.columns(2)
+    col1, col2, col3 = st.columns(3)
 
     with col1:
         similarity_threshold = st.slider(
@@ -716,6 +716,14 @@ def show_relationship_mapping(ai_analyst):
             max_value=50,
             value=10
         )
+    
+    with col3:
+        layout_algorithm = st.selectbox(
+            "Graph Layout",
+            options=['force_directed', 'circular', 'kamada_kawai'],
+            index=0,
+            help="Algorithm for positioning nodes in the graph"
+        )
 
     if st.button("🔍 Find Relationships"):
         with st.spinner("Analyzing dataset relationships..."):
@@ -732,11 +740,21 @@ def show_relationship_mapping(ai_analyst):
 
             # Network visualization
             st.subheader("🌐 Relationship Network")
+            
+            st.info(f"💡 Using **{layout_algorithm.replace('_', ' ').title()}** layout algorithm for optimal visualization")
 
             network_data = fetch_api_data(f"network/visualization/{dataset['id']}")
             if network_data:
-                network_fig = create_optimized_network_visualization(network_data)
+                network_fig = create_optimized_network_visualization(
+                    network_data, 
+                    height=600,
+                    layout_algorithm=layout_algorithm
+                )
                 st.plotly_chart(network_fig, use_container_width=True)
+                
+                st.caption("💡 Tip: Hover over nodes to see details. Node size indicates number of connections.")
+            else:
+                st.warning("Network visualization data not available")
 
             # Related datasets table
             if relationships.get('related_datasets'):

@@ -700,7 +700,9 @@ async def get_network_visualization(
                 "color": "#ff6b6b",
                 "type": "primary",
                 "category": main_dataset_info.get('domain_category', 'Unknown') if main_dataset_info else 'Unknown',
-                "download_count": int(main_dataset_info.get('download_count', 0)) if main_dataset_info else 0
+                "download_count": int(main_dataset_info.get('download_count', 0)) if main_dataset_info else 0,
+                "connections": len(relationships_result.related_datasets),  # Add connection count
+                "description": main_dataset_info.get('description', '') if main_dataset_info else ''
             }
             nodes.append(main_node)
 
@@ -740,7 +742,9 @@ async def get_network_visualization(
                     "similarity_score": related.get('similarity_score', 0.3),
                     "download_count": related.get('download_count', 0),
                     "relationship_reasons": related.get('relationship_reasons', []),
-                    "potential_joins": related.get('potential_joins', [])
+                    "potential_joins": related.get('potential_joins', []),
+                    "connections": 1,  # Connected to main node, could calculate more
+                    "description": related.get('description', '')
                 }
                 nodes.append(node)
 
