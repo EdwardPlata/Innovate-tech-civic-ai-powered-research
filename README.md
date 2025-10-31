@@ -2,44 +2,97 @@
 
 A comprehensive platform for exploring NYC Open Data using AI-powered data discovery and relationship analysis.
 
+## 🎯 First Time Here?
+
+Run the automated setup script:
+```bash
+./setup.sh
+```
+
+This will check your system, install dependencies, and get you started in minutes!
+
 ## 🚀 Quick Start
 
-### One-Command Startup
+### Deployment Options
+
+Choose your preferred deployment method:
+
+#### Option 1: Simple Run Script (Recommended)
 ```bash
+# Quick start with automated setup
+./run.sh
+
+# With optimization
+./run.sh --optimize
+```
+
+#### Option 2: Standard Startup Script
+```bash
+# Direct startup
 ./start_scout.sh
 ```
 
-This will automatically:
-- Start the backend API server on port 8080
-- Start the frontend Streamlit app on port 8501
-- Monitor both services and provide status updates
+#### Option 3: Docker Deployment
+```bash
+# Using Docker Compose
+docker-compose up -d
+
+# Access the application
+# Frontend: http://localhost:8501
+# Backend: http://localhost:8080
+```
+
+See [Docker Deployment Guide](DOCKER_DEPLOYMENT.md) for detailed Docker instructions.
 
 ### Access the Application
 - **Frontend (Main UI)**: http://localhost:8501
 - **Backend API**: http://localhost:8080
 - **API Documentation**: http://localhost:8080/docs
 
-## 📋 Script Usage
+## 📋 Deployment Scripts
 
-### Start Services
+### Main Scripts
+
+**`run.sh`** - Simplified deployment script
 ```bash
-./start_scout.sh
+./run.sh              # Start services
+./run.sh --optimize   # Start with optimization
 ```
 
-### Check Service Status
+**`start_scout.sh`** - Full-featured startup script
 ```bash
-./start_scout.sh --status
+./start_scout.sh           # Start services
+./start_scout.sh --status  # Check status
+./start_scout.sh --stop    # Stop services
+./start_scout.sh --help    # Show help
 ```
 
-### Stop Services
+### Optimization Scripts
+
+Located in `scripts/` directory:
+
+**`optimize-deps.sh`** - Manage dependencies
 ```bash
-./start_scout.sh --stop
+./scripts/optimize-deps.sh                  # Check/install dependencies
+./scripts/optimize-deps.sh --check-outdated # Show outdated packages
+./scripts/optimize-deps.sh --clean-cache    # Clean pip cache
 ```
 
-### Get Help
+**`optimize-cache.sh`** - Manage cache
 ```bash
-./start_scout.sh --help
+./scripts/optimize-cache.sh --clean-old    # Clean old files
+./scripts/optimize-cache.sh --clean-all    # Clean all cache
+./scripts/optimize-cache.sh --stats        # Show statistics
 ```
+
+**`health-check.sh`** - Verify services
+```bash
+./scripts/health-check.sh              # Basic health check
+./scripts/health-check.sh --verbose    # Detailed output
+./scripts/health-check.sh --check-deps # Check dependencies
+```
+
+See [Scripts Documentation](scripts/README.md) for detailed usage.
 
 ## 🏗️ Architecture
 
@@ -73,6 +126,11 @@ Innovate-tech-civic-ai-powered-research/
 │   ├── core/                # Core AI components
 │   ├── providers/           # AI provider integrations
 │   └── docs/                # AI documentation
+├── scripts/                 # Deployment & optimization scripts
+│   ├── optimize-deps.sh    # Dependency management
+│   ├── optimize-cache.sh   # Cache optimization
+│   ├── health-check.sh     # Service health checks
+│   └── README.md           # Scripts documentation
 ├── docs/                    # General documentation
 │   ├── QUICK_START_GUIDE.md
 │   ├── USAGE.md
@@ -82,6 +140,12 @@ Innovate-tech-civic-ai-powered-research/
 │   └── [various implementation summaries]
 ├── subrepos/                # External integrations
 │   └── n8n-workflows/
+├── run.sh                   # Simplified deployment script
+├── start_scout.sh           # Full-featured startup script
+├── docker-compose.yml       # Docker orchestration
+├── Dockerfile.backend       # Backend container image
+├── Dockerfile.frontend      # Frontend container image
+├── DOCKER_DEPLOYMENT.md     # Docker deployment guide
 └── README.md                # This file
 ```
 
@@ -221,7 +285,8 @@ Edit `frontend/app.py` for UI settings:
 - **Stateless Design**: Easy horizontal scaling
 - **Organized Backend**: Modular structure ready for growth
 - **Database Ready**: Can integrate with PostgreSQL/Redis
-- **Container Ready**: Docker support ready to implement
+- **Container Ready**: Full Docker support with docker-compose orchestration
+- **Deployment Scripts**: Automated setup and optimization scripts
 
 ## 🧪 Development
 
