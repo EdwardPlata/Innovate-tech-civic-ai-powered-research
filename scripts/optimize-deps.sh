@@ -114,8 +114,8 @@ check_and_install() {
                 # Extract package name (before >= or ==)
                 pkg_name=$(echo "$package" | sed 's/[>=<].*//' | xargs)
                 
-                # Check if package is installed
-                if ! pip show "$pkg_name" &>/dev/null; then
+                # Check if package is installed using UV
+                if ! uv pip show "$pkg_name" &>/dev/null; then
                     missing_count=$((missing_count + 1))
                 fi
             done < "$req_file"
@@ -165,7 +165,7 @@ fi
 # Check for outdated packages
 if [ "$1" = "--check-outdated" ] || [ "$2" = "--check-outdated" ]; then
     print_info "Checking for outdated packages..."
-    pip list --outdated
+    uv pip list --outdated
 fi
 
 echo

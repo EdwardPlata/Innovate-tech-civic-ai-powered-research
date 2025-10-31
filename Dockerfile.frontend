@@ -25,7 +25,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY frontend/requirements.txt /app/frontend/requirements.txt
 
 # Install Python dependencies using UV
-RUN uv pip install --no-cache -r /app/frontend/requirements.txt
+RUN uv pip install --no-cache-dir -r /app/frontend/requirements.txt
 
 # Copy frontend application
 COPY frontend /app/frontend

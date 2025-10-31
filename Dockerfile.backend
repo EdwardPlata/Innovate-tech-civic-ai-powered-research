@@ -21,7 +21,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY backend/requirements.txt /app/backend/requirements.txt
 
 # Install Python dependencies using UV
-RUN uv pip install --no-cache -r /app/backend/requirements.txt
+RUN uv pip install --no-cache-dir -r /app/backend/requirements.txt
 
 # Copy Scout Data Discovery library
 COPY scout_data_discovery /app/scout_data_discovery
