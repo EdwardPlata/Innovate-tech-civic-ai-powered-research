@@ -75,6 +75,17 @@ fi
 
 print_success "Python $PYTHON_VERSION detected"
 
+# Check UV
+print_info "Checking UV package manager..."
+if ! command -v uv &> /dev/null; then
+    print_warning "UV is not installed"
+    print_info "Installing UV..."
+    pip install uv
+    print_success "UV installed"
+else
+    print_success "UV is available"
+fi
+
 # Check pip
 print_info "Checking pip installation..."
 if ! command -v pip &> /dev/null && ! command -v pip3 &> /dev/null; then
@@ -134,13 +145,15 @@ if [[ ! $REPLY =~ ^[Nn]$ ]]; then
         bash "$SCRIPT_DIR/scripts/optimize-deps.sh" --upgrade-pip
     else
         # Fallback installation
+        USER_SITE=$(python3 -m site --user-site)
+        
         print_info "Installing backend dependencies..."
         cd "$SCRIPT_DIR/backend"
-        pip install -q -r requirements.txt
+        uv pip install -q -r requirements.txt --target "$USER_SITE"
         
         print_info "Installing frontend dependencies..."
         cd "$SCRIPT_DIR/frontend"
-        pip install -q -r requirements.txt
+        uv pip install -q -r requirements.txt --target "$USER_SITE"
         
         cd "$SCRIPT_DIR"
     fi

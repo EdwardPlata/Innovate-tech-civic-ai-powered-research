@@ -49,6 +49,16 @@ fi
 PYTHON_VERSION=$(python3 --version 2>&1 | awk '{print $2}')
 print_success "Python $PYTHON_VERSION found"
 
+# Check UV installation
+print_info "Checking UV package manager..."
+if ! command -v uv &> /dev/null; then
+    print_warning "UV is not installed. Installing UV..."
+    pip install uv
+    print_success "UV installed"
+else
+    print_success "UV is available"
+fi
+
 # Check if optimization scripts should be run
 if [ "$1" = "--optimize" ] || [ "$1" = "-o" ]; then
     print_info "Running optimization scripts..."
@@ -73,7 +83,8 @@ cd "$SCRIPT_DIR/backend"
 if [ -f "requirements.txt" ]; then
     if ! python3 -c "import fastapi, uvicorn" 2>/dev/null; then
         print_warning "Backend dependencies not fully installed. Installing..."
-        pip install -q -r requirements.txt
+        USER_SITE=$(python3 -m site --user-site)
+        uv pip install -q -r requirements.txt --target "$USER_SITE"
         print_success "Backend dependencies installed"
     else
         print_success "Backend dependencies already installed"
@@ -86,7 +97,8 @@ cd "$SCRIPT_DIR/frontend"
 if [ -f "requirements.txt" ]; then
     if ! python3 -c "import streamlit" 2>/dev/null; then
         print_warning "Frontend dependencies not fully installed. Installing..."
-        pip install -q -r requirements.txt
+        USER_SITE=$(python3 -m site --user-site)
+        uv pip install -q -r requirements.txt --target "$USER_SITE"
         print_success "Frontend dependencies installed"
     else
         print_success "Frontend dependencies already installed"
