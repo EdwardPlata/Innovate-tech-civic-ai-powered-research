@@ -2,6 +2,15 @@
 
 A comprehensive platform for exploring NYC Open Data using AI-powered data discovery and relationship analysis.
 
+## 🎯 First Time Here?
+
+Run the automated setup script:
+```bash
+./setup.sh
+```
+
+This will check your system, install dependencies, and get you started in minutes!
+
 ## 🚀 Quick Start
 
 ### Deployment Options
