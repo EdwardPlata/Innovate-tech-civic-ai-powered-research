@@ -1,5 +1,4 @@
 # Docker Compose configuration for Scout Data Discovery Platform
-version: '3.8'
 
 services:
   # Backend API Service

@@ -25,7 +25,7 @@ passlib[bcrypt]>=1.7.4
 
 # Database (optional)
 sqlalchemy>=2.0.0
-sqlite3
+# sqlite3 is included with Python standard library
 
 # Caching
 redis>=4.5.0
