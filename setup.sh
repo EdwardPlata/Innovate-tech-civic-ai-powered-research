@@ -123,7 +123,7 @@ print_section "3. Dependency Installation"
 # Ask user for installation preference
 echo
 print_info "Ready to install dependencies. This may take a few minutes."
-read -p "$(echo -e ${CYAN}Install dependencies now? [Y/n]: ${NC})" -n 1 -r
+read -p "$(echo -e "${CYAN}Install dependencies now? [Y/n]: ${NC}")" -n 1 -r
 echo
 
 if [[ ! $REPLY =~ ^[Nn]$ ]]; then
@@ -181,7 +181,7 @@ print_info "For detailed deployment options, see: DEPLOYMENT_GUIDE.md"
 echo
 
 # Ask if user wants to start now
-read -p "$(echo -e ${CYAN}Would you like to start Scout now? [Y/n]: ${NC})" -n 1 -r
+read -p "$(echo -e "${CYAN}Would you like to start Scout now? [Y/n]: ${NC}")" -n 1 -r
 echo
 
 if [[ ! $REPLY =~ ^[Nn]$ ]]; then

@@ -59,7 +59,3 @@ services:
 networks:
   scout-network:
     driver: bridge
-
-volumes:
-  cache-data:
-  logs-data:

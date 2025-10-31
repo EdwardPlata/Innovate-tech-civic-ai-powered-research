@@ -129,7 +129,10 @@ if [ "$1" = "--clean-python" ] || [ "$1" = "-p" ] || [ "$1" = "--clean-all" ]; t
     print_info "Cleaning Python __pycache__ directories..."
     
     if [ "$PYCACHE_COUNT" -gt 0 ]; then
-        find "$PROJECT_ROOT" -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null || true
+        # Using while loop for safer handling of paths with special characters
+        find "$PROJECT_ROOT" -type d -name "__pycache__" -print0 2>/dev/null | while IFS= read -r -d '' dir; do
+            rm -rf "$dir" 2>/dev/null || true
+        done
         find "$PROJECT_ROOT" -type f -name "*.pyc" -delete 2>/dev/null || true
         find "$PROJECT_ROOT" -type f -name "*.pyo" -delete 2>/dev/null || true
         print_success "Python cache cleaned"
