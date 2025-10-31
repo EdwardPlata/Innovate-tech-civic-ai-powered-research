@@ -56,15 +56,16 @@ def create_optimized_quality_gauge(score: float, title: str = "Quality Score") -
 @st.cache_data(ttl=600)
 def create_optimized_network_visualization(
     network_data: Dict[str, Any],
-    height: int = 500
+    height: int = 500,
+    layout_algorithm: str = 'force_directed'
 ) -> go.Figure:
     """
-    Create optimized network visualization using Plotly with caching
-    Uses efficient layout algorithms and reduced render complexity
+    Create optimized network visualization using Plotly with advanced layout algorithms
     
     Args:
         network_data: Dictionary with 'nodes' and 'edges' keys
         height: Chart height in pixels
+        layout_algorithm: Layout algorithm to use ('force_directed', 'circular', 'hierarchical', 'kamada_kawai')
         
     Returns:
         Plotly figure object
@@ -75,86 +76,180 @@ def create_optimized_network_visualization(
     nodes = network_data['nodes']
     edges = network_data.get('edges', [])
     
-    # Use optimized circular layout
     n = len(nodes)
     if n == 0:
         return go.Figure()
     
-    # Pre-compute positions
-    angles = np.linspace(0, 2 * np.pi, n, endpoint=False)
-    positions = {
-        node['id']: (np.cos(angle), np.sin(angle))
-        for node, angle in zip(nodes, angles)
-    }
+    # Use NetworkX for better layout algorithms
+    try:
+        import networkx as nx
+        
+        # Build NetworkX graph
+        G = nx.Graph()
+        for node in nodes:
+            G.add_node(node['id'], **node)
+        
+        for edge in edges:
+            weight = edge.get('weight', 1.0)
+            G.add_edge(edge['source'], edge['target'], weight=weight)
+        
+        # Apply selected layout algorithm
+        if layout_algorithm == 'force_directed' or layout_algorithm == 'spring':
+            # Force-directed layout (Spring) - better for showing relationships
+            positions = nx.spring_layout(G, k=1.5/np.sqrt(n), iterations=50, seed=42)
+        elif layout_algorithm == 'kamada_kawai':
+            # Kamada-Kawai layout - good for showing distances
+            positions = nx.kamada_kawai_layout(G)
+        elif layout_algorithm == 'hierarchical':
+            # Hierarchical layout - good for tree-like structures
+            try:
+                positions = nx.nx_agraph.graphviz_layout(G, prog='dot')
+            except:
+                # Fallback to spring layout if graphviz not available
+                positions = nx.spring_layout(G, k=1.5/np.sqrt(n), iterations=50, seed=42)
+        else:  # circular (default fallback)
+            positions = nx.circular_layout(G)
+        
+        # Convert node IDs to positions for all nodes
+        node_positions = {node['id']: positions.get(node['id'], (0, 0)) for node in nodes}
+        
+    except ImportError:
+        # Fallback to circular layout if networkx not available
+        angles = np.linspace(0, 2 * np.pi, n, endpoint=False)
+        node_positions = {
+            node['id']: (np.cos(angle), np.sin(angle))
+            for node, angle in zip(nodes, angles)
+        }
     
-    # Create edge trace with optimized data structure
-    edge_coords = []
+    # Create enhanced edge traces with varying thickness based on weight
+    edge_traces = []
+    edge_weights = [edge.get('weight', 0.5) for edge in edges]
+    max_weight = max(edge_weights) if edge_weights else 1.0
+    
     for edge in edges:
-        if edge['source'] in positions and edge['target'] in positions:
-            x0, y0 = positions[edge['source']]
-            x1, y1 = positions[edge['target']]
-            edge_coords.extend([(x0, y0), (x1, y1), (None, None)])
+        if edge['source'] in node_positions and edge['target'] in node_positions:
+            x0, y0 = node_positions[edge['source']]
+            x1, y1 = node_positions[edge['target']]
+            weight = edge.get('weight', 0.5)
+            
+            # Normalize edge width based on weight
+            edge_width = 0.5 + (weight / max_weight) * 4
+            edge_opacity = 0.3 + (weight / max_weight) * 0.5
+            
+            edge_trace = go.Scatter(
+                x=[x0, x1, None],
+                y=[y0, y1, None],
+                mode='lines',
+                line=dict(
+                    width=edge_width,
+                    color=f'rgba(136, 136, 136, {edge_opacity})'
+                ),
+                hoverinfo='text',
+                hovertext=f"Connection strength: {weight:.2f}",
+                showlegend=False
+            )
+            edge_traces.append(edge_trace)
     
-    if edge_coords:
-        edge_x, edge_y = zip(*edge_coords)
-    else:
-        edge_x, edge_y = [], []
+    # Create enhanced node trace with better hover information
+    node_x = []
+    node_y = []
+    node_text = []
+    node_hover = []
+    node_colors = []
+    node_sizes = []
     
-    edge_trace = go.Scatter(
-        x=edge_x,
-        y=edge_y,
-        line=dict(width=1.5, color='rgba(136, 136, 136, 0.5)'),
-        hoverinfo='none',
-        mode='lines',
-        showlegend=False
-    )
-    
-    # Create optimized node trace
-    node_data = [(positions[node['id']][0], positions[node['id']][1], 
-                  node.get('name', ''), node.get('color', '#1f77b4'),
-                  node.get('size', 15)) for node in nodes]
-    
-    if node_data:
-        node_x, node_y, node_text, node_colors, node_sizes = zip(*node_data)
-    else:
-        node_x, node_y, node_text, node_colors, node_sizes = [], [], [], [], []
+    for node in nodes:
+        if node['id'] in node_positions:
+            x, y = node_positions[node['id']]
+            node_x.append(x)
+            node_y.append(y)
+            
+            # Truncate long names for display
+            display_name = node.get('name', '')[:30] + '...' if len(node.get('name', '')) > 30 else node.get('name', '')
+            node_text.append(display_name)
+            
+            # Enhanced hover info
+            hover_info = f"<b>{node.get('name', 'Unknown')}</b><br>"
+            hover_info += f"Category: {node.get('category', 'N/A')}<br>"
+            hover_info += f"Connections: {node.get('connections', 0)}"
+            if 'description' in node:
+                desc = node['description'][:100] + '...' if len(node.get('description', '')) > 100 else node.get('description', '')
+                hover_info += f"<br>Description: {desc}"
+            node_hover.append(hover_info)
+            
+            # Dynamic node sizing based on connections/importance
+            base_size = node.get('size', 15)
+            connection_count = node.get('connections', 0)
+            adjusted_size = base_size + min(connection_count * 2, 20)
+            node_sizes.append(adjusted_size)
+            
+            node_colors.append(node.get('color', '#1f77b4'))
     
     node_trace = go.Scatter(
         x=node_x,
         y=node_y,
         mode='markers+text',
         hoverinfo='text',
+        hovertext=node_hover,
         text=node_text,
         textposition="top center",
-        textfont=dict(size=10),
+        textfont=dict(size=9, color='#333'),
         marker=dict(
             size=node_sizes,
             color=node_colors,
-            line=dict(width=1.5, color='white'),
-            opacity=0.9
+            line=dict(width=2, color='white'),
+            opacity=0.9,
+            symbol='circle'
         ),
         showlegend=False
     )
     
-    # Create optimized figure
+    # Create optimized figure with all traces
     fig = go.Figure(
-        data=[edge_trace, node_trace],
+        data=edge_traces + [node_trace],
         layout=go.Layout(
             title={
-                'text': 'Dataset Relationship Network',
-                'font': {'size': 16},
+                'text': f'Dataset Relationship Network ({layout_algorithm.replace("_", " ").title()} Layout)',
+                'font': {'size': 16, 'color': '#333'},
                 'x': 0.5,
                 'xanchor': 'center'
             },
             showlegend=False,
             hovermode='closest',
-            margin=dict(b=10, l=10, r=10, t=40),
-            xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
-            yaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+            margin=dict(b=20, l=20, r=20, t=50),
+            xaxis=dict(
+                showgrid=False,
+                zeroline=False,
+                showticklabels=False,
+                range=[min(node_x) - 0.2, max(node_x) + 0.2] if node_x else [-1, 1]
+            ),
+            yaxis=dict(
+                showgrid=False,
+                zeroline=False,
+                showticklabels=False,
+                range=[min(node_y) - 0.2, max(node_y) + 0.2] if node_y else [-1, 1]
+            ),
             height=height,
-            paper_bgcolor='rgba(0,0,0,0)',
-            plot_bgcolor='rgba(0,0,0,0)'
+            paper_bgcolor='rgba(250, 250, 250, 1)',
+            plot_bgcolor='rgba(255, 255, 255, 1)',
+            # Add dragmode for better interaction
+            dragmode='pan'
         )
+    )
+    
+    # Add configuration for interactivity
+    fig.update_layout(
+        updatemenus=[
+            dict(
+                type="buttons",
+                direction="left",
+                x=0.1,
+                y=1.15,
+                buttons=[
+                    dict(label="Reset", method="relayout", args=["xaxis.autorange", True]),
+                ]
+            )
+        ]
     )
     
     return fig
